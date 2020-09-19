@@ -16,7 +16,7 @@ int main()
         exit(1);
     }
 
-    if (write(fd, "A0", 2) != 2) {
+    if (write(fd, "0", 2) != 2) {
         perror("Error writing to /sys/class/gpio/export");
         exit(1);
     }

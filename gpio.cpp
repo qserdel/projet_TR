@@ -70,7 +70,7 @@ int main()
         exit(1);
     }
 
-    if (write(fd, "24", 2) != 2) {
+    if (write(fd, "0", 2) != 2) {
         perror("Error writing to /sys/class/gpio/unexport");
         exit(1);
     }

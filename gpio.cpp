@@ -23,24 +23,24 @@ int main()
 
     close(fd);
 
-    // Set the pin to be an output by writing "out" to /sys/class/gpio/gpioA0/direction
+    // Set the pin to be an output by writing "out" to /sys/class/gpio/gpio0/direction
 
-    fd = open("/sys/class/gpio/gpioA0/direction", O_WRONLY);
+    fd = open("/sys/class/gpio/gpio0/direction", O_WRONLY);
     if (fd == -1) {
-        perror("Unable to open /sys/class/gpio/gpioA0/direction");
+        perror("Unable to open /sys/class/gpio/gpio0/direction");
         exit(1);
     }
 
     if (write(fd, "out", 3) != 3) {
-        perror("Error writing to /sys/class/gpio/gpioA0/direction");
+        perror("Error writing to /sys/class/gpio/gpio0/direction");
         exit(1);
     }
 
     close(fd);
 
-    fd = open("/sys/class/gpio/gpioA0/value", O_WRONLY);
+    fd = open("/sys/class/gpio/gpio0/value", O_WRONLY);
     if (fd == -1) {
-        perror("Unable to open /sys/class/gpio/gpioA0/value");
+        perror("Unable to open /sys/class/gpio/gpio0/value");
         exit(1);
     }
 
@@ -48,13 +48,13 @@ int main()
 
     for (int i = 0; i < 100; i++) {
         if (write(fd, "1", 1) != 1) {
-            perror("Error writing to /sys/class/gpio/gpioA0/value");
+            perror("Error writing to /sys/class/gpio/gpio0/value");
             exit(1);
         }
         usleep(50000);
 
         if (write(fd, "0", 1) != 1) {
-            perror("Error writing to /sys/class/gpio/gpioA0/value");
+            perror("Error writing to /sys/class/gpio/gpio0/value");
             exit(1);
         }
         usleep(50000);

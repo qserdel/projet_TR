@@ -51,13 +51,13 @@ int main()
             perror("Error writing to /sys/class/gpio/gpio5/value");
             exit(1);
         }
-        usleep(50000);
+        usleep(2000000);
 
         if (write(fd, "5", 1) != 1) {
             perror("Error writing to /sys/class/gpio/gpio5/value");
             exit(1);
         }
-        usleep(50000);
+        usleep(2000000);
     }
 
     close(fd);

@@ -5,9 +5,9 @@ int main(void)
     // Red LED: Physical pin 18, BCM GPIO24, and WiringPi pin 5.
     const int led = 5;
 
-    wiringPi.Setup();
+    wiringPiSetup();
 
-    wiringPi.pinMode(led, OUTPUT);
+    pinMode(led, OUTPUT);
 
     while (1) {
         digitalWrite(led, HIGH);

@@ -33,12 +33,12 @@ while(1)
 {
 	for(int i = 0; i < 50; i++)
 	{
-		pwmWrite(26, i);
+		pwmWrite(26, 10);
 		delay(3);
 	}
   for(int i = 50; i > 0; i--)
   {
-    pwmWrite(26, i);
+    pwmWrite(26, 0);
     delay(3);
   }
 }

@@ -6,15 +6,15 @@ using namespace std;		// No need to keep using “std”
 int main()
 {
 wiringPiSetup();			// Setup the library
-pinMode(9, OUTPUT);		// Configure GPIO0 as an output
+pinMode(21, OUTPUT);		// Configure GPIO0 as an output
 
 // Main program loop
 while(1)
 {
 // Toggle the LED
-digitalWrite(9, HIGH);
+digitalWrite(21, HIGH);
 delay(500);
-digitalWrite(9, LOW);
+digitalWrite(21, LOW);
 delay(500);
 }
 

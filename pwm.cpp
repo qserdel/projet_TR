@@ -31,15 +31,15 @@ pinMode(26, PWM_OUTPUT);		// Configure GPIO1 as an output for PWM
 // Main program loop
 while(1)
 {
-	for(int i = 0; i < 50; i++)
+	for(int i = 0; i < 10; i++)
 	{
-		pwmWrite(26, 0);
-		delay(3);
+		pwmWrite(26, 1);
+		delay(10);
 	}
-  for(int i = 50; i > 0; i--)
+  for(int i = 10; i > 0; i--)
   {
     pwmWrite(26, 0);
-    delay(3);
+    delay(10);
   }
 }
 return 0;

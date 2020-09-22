@@ -26,19 +26,19 @@ unsigned int prevTime;		// Temporary variable that holds the previous millis val
 int main()
 {
 wiringPiSetup();			// Setup the library
-pinMode(26, PWM_OUTPUT);		// Configure GPIO1 as an output for PWM
+pinMode(27, PWM_OUTPUT);		// Configure GPIO1 as an output for PWM
 
 // Main program loop
 while(1)
 {
 	for(int i = 0; i < 10; i++)
 	{
-		pwmWrite(26, 1);
+		pwmWrite(27, 1);
 		delay(10);
 	}
   for(int i = 10; i > 0; i--)
   {
-    pwmWrite(26, 0);
+    pwmWrite(27, 0);
     delay(10);
   }
 }

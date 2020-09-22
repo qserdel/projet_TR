@@ -12,7 +12,9 @@ pinMode(9, OUTPUT);		// Configure GPIO0 as an output
 while(1)
 {
 // Toggle the LED
-digitalWrite(9, !digitalRead(9));
+digitalWrite(9, 1);
+delay(500);
+digitalWrite(9, 0);
 delay(500);
 }
 

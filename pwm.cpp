@@ -1,5 +1,7 @@
 #include <iostream>		// Include all needed libraries here
+extern "C" {
 #include <wiringPi.h>
+}
 
 using namespace std;		// No need to keep using “std”
 

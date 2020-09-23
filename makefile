@@ -10,7 +10,7 @@ pwm.o: pwm.cpp
 	g++ -c pwm.cpp
 
 pwm: pwm.o
-	g++ -o pwm pwm.o -lwiringPi
+	g++ -o pwm pwm.o -lwiringPi -lpthread
 
 clean:
 	rm -f *.o

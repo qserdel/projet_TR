@@ -12,7 +12,7 @@ int main(int argc, char** argv)
 
         if( !cap.isOpened() )
         {
-            cout << "Could not initialize capturing...\n";
+            std::cout << "Could not initialize capturing...\n"<<endl;
             return 0;
         }
 

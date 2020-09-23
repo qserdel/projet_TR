@@ -1,6 +1,8 @@
 #include <wiringPi.h>
 #include <softPwm.h>
 
+//pour faire bouger les servo d'avant en arriere
+
 int main()
 {
 wiringPiSetup();			// Setup the library

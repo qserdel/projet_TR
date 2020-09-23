@@ -12,5 +12,11 @@ pwm.o: pwm.cpp
 pwm: pwm.o
 	g++ -o pwm pwm.o -lwiringPi -lpthread
 
+camOpen.o: camOpen.cpp
+	g++ -c camOpen.cpp
+
+camOpen: camOpen.o
+	g++ -o camOpen camOpen.o
+
 clean:
 	rm -f *.o

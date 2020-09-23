@@ -16,7 +16,7 @@ camOpen.o: camOpen.cpp
 	g++ -c camOpen.cpp
 
 camOpen: camOpen.o
-	g++ -o camOpen camOpen.o pkg-config opencv --cflags` `pkg-config opencv --libs
+	g++ -o camOpen camOpen.o pkg-config opencv --libs
 
 clean:
 	rm -f *.o

@@ -21,7 +21,5 @@ int main(int argc, char** argv)
             cap >> output;
 
             imshow("webcam input", output);
-            char c = (char)waitKey(10);
-            if( c == 27 ) break;
           }
 }

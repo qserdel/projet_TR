@@ -1,4 +1,4 @@
-all: gpio pwm clean
+all: gpio pwm camOpen clean
 
 gpio.o: gpio.cpp
 	g++ -c gpio.cpp

@@ -16,7 +16,7 @@ camOpen.o: camOpen.cpp
 	g++ -c camOpen.cpp
 
 camOpen: camOpen.o
-	g++ -o camOpen camOpen.o `pkg-config --cflags --libs opencv2` -lopencv_videoio
+	g++ -o camOpen camOpen.o -I /usr/local/include -L /usr/local/lib -lopencv_core -lopencv_highgui
 
 clean:
 	rm -f *.o

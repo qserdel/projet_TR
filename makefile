@@ -13,10 +13,10 @@ pwm: pwm.o
 	g++ -o pwm pwm.o -lwiringPi -lpthread
 
 camOpen.o: camOpen.cpp
-	g++ -c camOpen.cpp `pkg-config --cflags --libs opencv`
+	g++ -c camOpen.cpp pkg-config --cflags --libs opencv
 
 camOpen: camOpen.o
-	g++ -o camOpen camOpen.o
+	g++ -o camOpen camOpen.o --cflags --libs opencv
 
 clean:
 	rm -f *.o

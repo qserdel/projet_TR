@@ -12,12 +12,12 @@ while(1)
 {
 	for(int i = 0; i < 100; i++)
 	{
-		softPwmWrite(27, 20);
+		softPwmWrite(27, i);
 		delay(10);
 	}
-	for(int i = 0; i < 100; i++)
+	for(int i = 100; i > 0; i--)
   {
-    softPwmWrite(27, 10);
+    softPwmWrite(27, i);
     delay(10);
   }
 }

@@ -6,7 +6,7 @@
 int main()
 {
 wiringPiSetup();			// Setup the library
-softPwmCreate(27,0,100); //initialise un pin pwm
+softPwmCreate(27,100,200); //initialise un pin pwm
 
 while(1)
 {

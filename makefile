@@ -4,7 +4,7 @@ gpio.o: gpio.cpp
 	g++ -c gpio.cpp
 
 gpio: gpio.o
-	g++ -o gpio gpio.o
+	g++ -o gpio gpio.o -lwiringPi
 
 pwm.o: pwm.cpp
 	g++ -c pwm.cpp

@@ -1,101 +1,18 @@
-#include <errno.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <unistd.h>
+#include <wiringpi.h>
 
 int main()
 {
-    // Export the desired pin by writing to /sys/class/gpio/export
+  wiringPiSetup();			// Setup the library
+  pinMode(27, OUTPUT);		// Configure GPIO0 as an output
 
-    int fd = open("/sys/class/gpio/export", O_WRONLY);
-    if (fd == -1) {
-        perror("Unable to open /sys/class/gpio/export");
-        exit(1);
-    }
-
-    if (write(fd, "5", 2) != 2) {
-        perror("Error writing to /sys/class/gpio/export");
-        exit(1);
-    }
-
-    close(fd);
-
-    // Set the pin to be an output by writing "out" to /sys/class/gpio/gpio5/direction
-
-    fd = open("/sys/class/gpio/gpio5/direction", O_WRONLY);
-    if (fd == -1) {
-        perror("Unable to open /sys/class/gpio/gpio5/direction");
-        exit(1);
-    }
-
-    if (write(fd, "out", 3) != 3) {
-        perror("Error writing to /sys/class/gpio/gpio5/direction");
-        exit(1);
-    }
-
-    close(fd);
-
-    fd = open("/sys/class/gpio/gpio5/value", O_WRONLY);
-    if (fd == -1) {
-        perror("Unable to open /sys/class/gpio/gpio5/value");
-        exit(1);
-    }
-
-    // Toggle LED 50 ms on, 50ms off, 100 times (10 seconds)
-
-    for (int i = 0; i < 100; i++) {
-        if (write(fd, "1", 1) != 1) {
-            perror("Error writing to /sys/class/gpio/gpio5/value");
-            exit(1);
-        }
-        usleep(50000);
-
-        if (write(fd, "0", 1) != 1) {
-            perror("Error writing to /sys/class/gpio/gpio5/value");
-            exit(1);
-        }
-        usleep(50000);
-    }
-
-    close(fd);
-
-    // Unexport the pin by writing to /sys/class/gpio/unexport
-
-    fd = open("/sys/class/gpio/unexport", O_WRONLY);
-    if (fd == -1) {
-        perror("Unable to open /sys/class/gpio/unexport");
-        exit(1);
-    }
-
-    if (write(fd, "5", 2) != 2) {
-        perror("Error writing to /sys/class/gpio/unexport");
-        exit(1);
-    }
-
-    close(fd);
-
-    // And exit
-    return 0;
+  // Main program loop
+  while(1)
+  {
+    // Toggle the LED
+    digitalWrite(27, HIGH);
+    delay(500);
+    digitalWrite(27, LOW);
+    delay(500);
+  }
+  return 0;
 }
-
-// alternative plus simple avec wiringPi
-/*int main()
-{
-wiringPiSetup();			// Setup the library
-pinMode(21, OUTPUT);		// Configure GPIO0 as an output
-
-// Main program loop
-while(1)
-{
-// Toggle the LED
-digitalWrite(21, HIGH);
-delay(500);
-digitalWrite(21, LOW);
-delay(500);
-}
-
-return 0;
-}*/

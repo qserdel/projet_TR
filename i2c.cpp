@@ -7,13 +7,13 @@ using namespace std;
 
 int main()
 {
-  uint16_t data [1];
+  uint16_t data;
   int fd = wiringPiI2CSetup(0x04);
   if (wiringPiI2CWrite (fd, 0x30) < 0)
     return (-1) ;
   while(1){
     read (fd, data, 1);
-    cout<<(int)data[i]<<endl;
+    cout<<(int)data<<endl;
     }
   }
   /*while(1){

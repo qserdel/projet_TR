@@ -7,15 +7,15 @@ using namespace std;
 
 int main()
 {
-  uint8_t data [2];
+  uint8_t data [1];
   int fd = wiringPiI2CSetup(0x04);
   if (wiringPiI2CWrite (fd, 0x10) < 0)
     return (-1) ;
   while(1){
-    while ((read (fd, data, 2) < 0)){
+    while ((read (fd, data, 1) < 0)){
       delay (10) ;
     }
-    for(int i=0;i<2;i++){
+    for(int i=0;i<1;i++){
       cout<<(int)data[i]<<endl;
     }
   }

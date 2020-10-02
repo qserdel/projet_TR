@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-  uint16_t data [100];
+  uint8_t data [100];
   int fd = wiringPiI2CSetup(0x04);
   while ((read (fd, data, 2) < 0)){
     delay (20) ;

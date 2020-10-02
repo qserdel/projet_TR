@@ -16,7 +16,7 @@ int main()
       delay (10) ;
     }
     for(int i=0;i<2;i++){
-      cout<<data[i]<<endl;
+      cout<<(int)data[i]<<endl;
     }
   }
   /*while(1){

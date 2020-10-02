@@ -17,7 +17,10 @@ int main()
   for(int i=0;i<2;i++){
     cout<<(int)data[i]<<endl;
   }*/
-  cout<<wiringPiI2CRead(fd)<<endl;
+  while(1){
+    cout<<wiringPiI2CRead(fd)<<endl;
+    delay(10);
+  }
   return 0;
 }
 

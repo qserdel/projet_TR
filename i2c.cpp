@@ -9,8 +9,8 @@ int main()
 {
   uint8_t data [5];
   int fd = wiringPiI2CSetup(0x04);
-  if (wiringPiI2CWrite (fd, 0x30) < 0)
-           return (-1) ;
+  if (wiringPiI2CWrite (fd, 0x20) < 0)
+    return (-1) ;
   while ((read (fd, data, 2) < 0)){
     delay (20) ;
   }

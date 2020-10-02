@@ -23,7 +23,6 @@ int main()
   pinMode(2, INPUT);		// Configure GPIO06 as an output
   while(1){
     cout<<digitalRead(1)<<endl;
-    delay(50);
   }
   return 0;
 

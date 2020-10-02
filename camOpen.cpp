@@ -2,7 +2,7 @@
 
 using namespace cv;
 
-int main(int argc, char** argv)
+int main()
 {
     VideoCapture cap;
     // open the default camera, use something different from 0 otherwise;

@@ -6,7 +6,7 @@
 using namespace std;
 
 int main()
-/*{
+{
   uint16_t data [5];
   int fd = wiringPiI2CSetup(0x04);
   while ((read (fd, data, 2) < 0)){
@@ -16,9 +16,9 @@ int main()
     cout<<(int)data[i]<<endl;
   }
   return 0;
-}*/
+}
 
-{
+/*{
   wiringPiSetup();
   pinMode(2, INPUT);		// Configure GPIO06 as an output
   while(1){
@@ -27,4 +27,4 @@ int main()
   }
   return 0;
 
-}
+}*/

@@ -17,7 +17,6 @@ int main()
     }
     for(int i=0;i<1;i++){
       cout<<(int)data[i]<<endl;
-      cout<<(int)(wiringPiI2CReadReg8(fd,0x00))<<endl ;
     }
   }
   /*while(1){

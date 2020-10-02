@@ -17,7 +17,7 @@ int main()
   for(int i=0;i<2;i++){
     cout<<(int)data[i]<<endl;
   }*/
-  cout<<wiringPiI2CRead(0x04)<<endl;
+  cout<<wiringPiI2CRead(fd)<<endl;
   return 0;
 }
 

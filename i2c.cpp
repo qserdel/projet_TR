@@ -12,5 +12,8 @@ int main()
   while ((read (fd, data, 2) < 0)){
     delay (10) ;
   }
+  for(int i=0;i<5;i++){
+    cout<<data[i]<<endl;
+  }
   return 0;
 }

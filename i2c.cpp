@@ -7,12 +7,12 @@ using namespace std;
 
 int main()
 {
-  uint16_t data [15];
+  uint16_t data [100];
   int fd = wiringPiI2CSetup(0x04);
   while ((read (fd, data, 2) < 0)){
     delay (20) ;
   }
-  for(int i=0;i<10;i++){
+  for(int i=0;i<100;i++){
     cout<<(int)data[i]<<endl;
   }
   return 0;

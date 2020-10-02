@@ -9,10 +9,10 @@ int main()
 {
   uint8_t data [2];
   int fd = wiringPiI2CSetup(0x04);
-  if (wiringPiI2CWrite (fd, 0x03f) < 0)
+  if (wiringPiI2CWrite (fd, 0x30) < 0)
     return (-1) ;
   while ((read (fd, data, 2) < 0)){
-    delay (20) ;
+    delay (10) ;
   }
   for(int i=0;i<2;i++){
     cout<<(int)data[i]<<endl;

@@ -3,6 +3,6 @@
 
 int main()
 {
-  std::cout<<wiringPiI2CRead(0)<<endl; 
+  cout<<wiringPiI2CRead(0)<<endl; 
   return 0;
 }

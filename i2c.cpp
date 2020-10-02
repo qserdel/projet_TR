@@ -7,9 +7,8 @@ using namespace std;
 int main()
 {
   int fd = wiringPiI2CSetup(0x04);
-  while(1){
-    cout<<wiringPiI2CRead(fd)<<endl;
-    //delay(50);
+  while ((read (fd, data, 2) < 0))
+    delay (10) ;
   }
   return 0;
 }

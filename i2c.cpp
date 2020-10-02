@@ -7,14 +7,14 @@ using namespace std;
 
 int main()
 {
-  uint8_t data [5];
+  uint8_t data [2];
   int fd = wiringPiI2CSetup(0x04);
-  if (wiringPiI2CWrite (fd, 0x20) < 0)
+  if (wiringPiI2CWrite (fd, 0x30) < 0)
     return (-1) ;
   while ((read (fd, data, 2) < 0)){
     delay (20) ;
   }
-  for(int i=0;i<5;i++){
+  for(int i=0;i<2;i++){
     cout<<(int)data[i]<<endl;
   }
   return 0;

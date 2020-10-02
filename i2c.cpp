@@ -13,7 +13,9 @@ int main()
     delay (20) ;
   }
   for(int i=0;i<100;i++){
-    cout<<(int)data[i]<<endl;
+    if((int)data[i]>1){
+      cout<<(int)data[i]<<endl;
+    }
   }
   return 0;
 }

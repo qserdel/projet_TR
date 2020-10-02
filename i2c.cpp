@@ -5,6 +5,8 @@ using namespace std;
 
 int main()
 {
-  cout<<wiringPiI2CRead(0)<<std::endl;
+  wiringPiI2CSetup(0x04);
+  while(1);
+    cout<<wiringPiI2CRead(0x04)<<std::endl;
   return 0;
 }

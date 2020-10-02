@@ -12,11 +12,8 @@ int main()
   if (wiringPiI2CWrite (fd, 0x30) < 0)
     return (-1) ;
   while(1){
-    while ((read (fd, data, 1) < 0)){
-      delay (10) ;
-    }
-    for(int i=0;i<1;i++){
-      cout<<(int)data[i]<<endl;
+    read (fd, data, 1)
+    cout<<(int)data[i]<<endl;
     }
   }
   /*while(1){

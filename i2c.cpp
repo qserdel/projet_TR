@@ -12,7 +12,7 @@ int main()
   if (wiringPiI2CWrite (fd, 0x30) < 0)
     return (-1) ;
   while(1){
-    read (fd, data, 1)
+    read (fd, data, 1);
     cout<<(int)data[i]<<endl;
     }
   }

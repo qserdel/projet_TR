@@ -2,16 +2,18 @@
 #include <wiringPiI2C.h>
 #include <iostream>
 #include <cerrno>
+#include <stdlib>
 using namespace std;
 
 int main()
 {
-  if(wiringPiI2CSetup(0x04)==-1){
+  int fd = wiringPiI2CSetup(0x04);
+  if(fd==-1){
     cout<<strerror(errno)<<endl;
   };
   //while(1){
-    cout<<wiringPiI2CRead(0x04)<<endl;
-    if(wiringPiI2CRead(0x04)==-1){
+    cout<<wiringPiI2CRead(fd)<<endl;
+    if(wiringPiI2CRead(fd)==-1){
       cout<<strerror(errno)<<endl;
     };
     delay(50);

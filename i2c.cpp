@@ -19,6 +19,7 @@ int main()
 }*/
 
 {
+  wiringPiSetup();
   pinMode(2, INPUT);		// Configure GPIO06 as an output
   while(1){
     cout<<digitalRead(1)<<endl;

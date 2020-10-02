@@ -5,8 +5,12 @@ using namespace std;
 
 int main()
 {
-  wiringPiI2CSetup(0x04);
-  while(1);
+  if(wiringPiI2CSetup(0x04)==-1){
+    cout<<"c'est de la merde"<<std::endl;
+  };
+  while(1){
     cout<<wiringPiI2CRead(0x04)<<std::endl;
+    delay(50);
+  }
   return 0;
 }

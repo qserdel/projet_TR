@@ -7,12 +7,12 @@ using namespace std;
 int main()
 {
   if(wiringPiI2CSetup(0x04)==-1){
-    cout<<std::strerror(errno)<<std::endl;
+    cout<<strerror(errno)<<endl;
   };
   //while(1){
-    cout<<wiringPiI2CRead(0x04)<<std::endl;
+    cout<<wiringPiI2CRead(0x04)<<endl;
     if(wiringPiI2CRead(0x04)==-1){
-      cout<<std::strerror(errno)<<std::endl;
+      cout<<strerror(errno)<<endl;
     };
     delay(50);
   //}

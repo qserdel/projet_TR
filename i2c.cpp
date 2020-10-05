@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-  uint16_t data [1];
+  uint16_t data [2];
   int fd = wiringPiI2CSetup(0x04);
   if (wiringPiI2CWrite (fd, 0x30+1) < 0)
     return (-1) ;

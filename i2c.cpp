@@ -9,7 +9,7 @@ int main()
 {
   uint16_t data [1];
   int fd = wiringPiI2CSetup(0x04);
-  if (wiringPiI2CWrite (fd, 0x30) < 0)
+  if (wiringPiI2CWrite (fd, 0x30+1) < 0)
     return (-1) ;
   while(1){
     read (fd, data, 1);

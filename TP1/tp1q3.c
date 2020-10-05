@@ -27,20 +27,20 @@ void send(char *data, size_t len) {
 }
 
 void safe_send(char *data, size_t len){
-  clock_gettime(CLOCK_REALTIME,&time_safe_send);
   pthread_mutex_lock(&m);
-  clock_gettime(CLOCK_REALTIME,&time_send);
   send(data,len);
-  clock_gettime(CLOCK_REALTIME,&time_end_send);
   pthread_mutex_unlock(&m);
-  clock_gettime(CLOCK_REALTIME,&time_end_safe_send);
-  printf("\ntemps send: %ld\n",time_end_send.tv_nsec-time_send.tv_nsec);
-  printf("\ntemps safe send: %ld\n",time_end_safe_send.tv_nsec-time_safe_send.tv_nsec);
-}
+  }
 
 void *task(void *arg) {
   char *buf = (char *) arg;
   safe_send(buf, SZ);
+  return NULL;
+}
+
+void *task_test(void *arg) {
+  char *buf = (char *) arg;
+  send(buf, SZ);
   return NULL;
 }
 
@@ -49,11 +49,24 @@ int main(int argc, char **argv) {
   int i;
   char msgs[4][SZ] = { "123456", "ABCDEF", "abcdef", "[{()}]" };
 
+  clock_gettime(CLOCK_REALTIME,&time_send);
+  for (i = 0; i < 4; i++)
+    pthread_create(&id[i], NULL, task_test, msgs[i]);
+  for (i = 0; i < 4; i++)
+    pthread_join(id[i], NULL);
+  clock_gettime(CLOCK_REALTIME,&time_end_send);
+  printf("\n");
+  printf("temps send: %lf ms\n",(double)(time_end_send.tv_nsec-time_send.tv_nsec)/1000000);
+
+
+  clock_gettime(CLOCK_REALTIME,&time_safe_send);
   for (i = 0; i < 4; i++)
     pthread_create(&id[i], NULL, task, msgs[i]);
   for (i = 0; i < 4; i++)
     pthread_join(id[i], NULL);
+  clock_gettime(CLOCK_REALTIME,&time_end_safe_send);
   printf("\n");
+  printf("temps safe send: %lf ms\n",(double)(time_end_safe_send.tv_nsec-time_safe_send.tv_nsec)/1000000);
   pthread_mutex_unlock(&m);
   return 0;
 }

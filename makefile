@@ -1,4 +1,4 @@
-all: clean gpio pwm camOpen i2c
+all: gpio pwm camOpen i2c
 
 
 gpio: gpio.cpp

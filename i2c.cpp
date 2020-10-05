@@ -17,7 +17,7 @@ int main()
     delay(20);
   }*/
   while(1){
-    cout<<wiringPiI2CRead(fd)<<endl;
+    cout<<wiringPiI2CReadReg16(fd,0x30+1)<<endl;
     delay(20);
   }
   return 0;

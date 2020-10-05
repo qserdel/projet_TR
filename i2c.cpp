@@ -13,7 +13,7 @@ int main()
     return (-1) ;
   while(1){
     read (fd, data, 1);
-    cout<<(int)data[0]<<endl;
+    cout<<(int)data[1]<<endl;
     delay(20);
     }
   /*while(1){

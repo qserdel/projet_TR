@@ -14,6 +14,7 @@ int main()
   while(1){
     read (fd, data, 1);
     cout<<(int)data[0]<<endl;
+    delay(20);
     }
   /*while(1){
     cout<<wiringPiI2CRead(fd)<<endl;

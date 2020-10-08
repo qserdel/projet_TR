@@ -26,28 +26,28 @@ int major;
 static ssize_t char_read(struct file *file, char *buf, size_t count,
   loff_t *ppos)
 {
-  pritk("reading char");
+  printk("reading char");
   return count;
 }
 static ssize_t char_write(struct file *file, const char *buf, size_t count,
    loff_t *ppos)
 {
-  pritk("writing char");
+  printk("writing char");
   return 0;
 }
 static int char_open(struct inode *inode, struct file *file)
 {
-  pritk("opening char");
+  printk("opening char");
   return 0;
 }
 static int char_release(struct inode *inode, struct file *file)
 {
-  pritk("releasing char");
+  printk("releasing char");
   return 0;
 }
 static long char_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 {
-  pritk("char ioctl");
+  printk("char ioctl");
   return 0;
 }
 static struct file_operations char_fops = {

@@ -8,7 +8,8 @@
 
 static int __init modules1_init(void)
 {
-	printk("Hello World!");
+	if (err = printk(KERN_INFO,"Hello World!"))
+		printf("Task create: %s", strerror(err);
 	//dmesg();
 	return 0;
 }

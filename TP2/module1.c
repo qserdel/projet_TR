@@ -6,7 +6,7 @@
 #include <linux/init.h>		/* module_{init,exit}() */
 #include <linux/moduleparam.h> /* parameters of module */
 
-static int parm 9;
+static int parm=9;
 
 static int __init modules1_init(void)
 {

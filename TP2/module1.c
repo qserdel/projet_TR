@@ -8,7 +8,7 @@
 
 static int __init modules1_init(void)
 {
-	printk(KERN_INFO,"Hello World!");
+	printk("Hello World!");
 	//dmesg();
 	return 0;
 }

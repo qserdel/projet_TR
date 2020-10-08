@@ -1,0 +1,43 @@
+#question 2.1
+
+commandes pour compiler, charger le module "module1", faire apparaitre la liste des modules puis le décharger (en tant que su):
+make
+insmod module1.ko
+lsmod
+rmmod module1
+
+#question 2.2
+
+Commande pour vérifier qu'on a bien print "Hello World!" dans le log du kernel :
+tail -f /var/log/kern.log
+
+#question 2.3
+
+Commande pour afficher les infos définies pour le module "module1" :
+modinfo module1.ko
+
+on obtient :
+filename:       /home/pi/Desktop/projet_TR/TP2/module1.ko
+description:    Driver TP
+author:         Quentin Serdel
+license:        GPL
+
+#question 2.4
+
+en lançant la commande tail -f /var/log/kern.log on a bien "param = 9"
+dans modinfo, on trouve :
+parm: parm:parametre entier (int)
+
+#question 2.5
+
+Cette ligne créé le fichier "mychar" dans le dossier ./dev :
+ret = register_chrdev(major, "mychar", &char_fops);
+
+ls -l nous donne ceci pour le fichier "mychar":
+crw-------  1 root root    240,   0 oct.   8 16:30 mychar
+La majeur de "mychar" est donc 240 et sa mineur est 0
+La définition de la majeur de "mychar" est effectuée grâce à ces lignes :
+ret = register_chrdev(major, "mychar", &char_fops);
+major = ret;
+
+#question 2.6

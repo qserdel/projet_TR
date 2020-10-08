@@ -8,7 +8,7 @@
 #include <asm/uaccess.h>
 #include <linux/fs.h>
 #include <linux/sched.h>
-#include <linux/cdev.h>  
+#include <linux/cdev.h>
 #include <linux/device.h>         // Header to support the kernel Driver Model
 
 #define  DEVICE_NAME "mychar"    ///< The device will appear at /dev/mychar using this value
@@ -23,26 +23,31 @@ int major;
 /*
  * File operations
  */
-static ssize_t char_read(struct file *file, char *buf, size_t count, 
+static ssize_t char_read(struct file *file, char *buf, size_t count,
   loff_t *ppos)
 {
+  pritk("reading char");
   return count;
 }
 static ssize_t char_write(struct file *file, const char *buf, size_t count,
    loff_t *ppos)
 {
+  pritk("writing char");
   return 0;
 }
 static int char_open(struct inode *inode, struct file *file)
 {
+  pritk("opening char");
   return 0;
 }
 static int char_release(struct inode *inode, struct file *file)
 {
+  pritk("releasing char");
   return 0;
 }
 static long char_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 {
+  pritk("char ioctl");
   return 0;
 }
 static struct file_operations char_fops = {
@@ -71,7 +76,7 @@ static int __init modules1_init(void)
     printk(KERN_ALERT "Failed to register device class\n");
     return PTR_ERR(charClass);          // Correct way to return an error on a pointer
   }
-  
+
   // Register the device driver
   charDevice = device_create(charClass, NULL, MKDEV(major, 0), NULL, DEVICE_NAME);
   if (IS_ERR(charDevice)){               // Clean up if there is an error
@@ -80,7 +85,7 @@ static int __init modules1_init(void)
     return PTR_ERR(charDevice);
   }
 
-  
+
   return 0;
 }
 
@@ -91,7 +96,7 @@ static void __exit modules1_exit(void)
   device_destroy(charClass, MKDEV(major, 0));     // remove the device
   class_unregister(charClass);                          // unregister the device class
   class_destroy(charClass);                             // remove the device class
-  
+
   unregister_chrdev(major, "mychar");
 }
 /*

@@ -22,3 +22,7 @@ static void __exit modules1_exit(void)
  */
 module_init(modules1_init);
 module_exit(modules1_exit);
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Quentin Serdel");
+MODULE_DESCRIPTION("Driver TP");

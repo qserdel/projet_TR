@@ -28,4 +28,4 @@ module_param(parm, int, 0644);
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Quentin Serdel");
 MODULE_DESCRIPTION("Driver TP");
-MODULE_PARM_DESC("parm",9);
+MODULE_PARM_DESC(parm,"parametre entier");

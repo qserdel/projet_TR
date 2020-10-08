@@ -5,6 +5,7 @@
 #include <linux/module.h>	/* modules */
 #include <linux/init.h>		/* module_{init,exit}() */
 #include <linux/moduleparam.h> /* parameters of module */
+#include <stdlib.h>
 
 static int __init modules1_init(void)
 {

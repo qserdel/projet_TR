@@ -8,6 +8,8 @@
 
 static int __init modules1_init(void)
 {
+	printk("Hello World!");
+	dmesg();
 	return 0;
 }
 

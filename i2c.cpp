@@ -8,14 +8,14 @@ static int i2c_pin = 1;
 using namespace std;
 
 float getDistance(){
-  
+
   int fd = wiringPiI2CSetup(0x04);
   if (wiringPiI2CWrite (fd, 0x30+i2c_pin) < 0)
     return (-1) ;
   int value = (int)wiringPiI2CReadReg16(fd,0x30+i2c_pin);
   float voltage = value*3.3/1024;
   close(fd);
-  float distance = (-56*voltage*voltage + 143*voltage + 2.4); //valable entre 5 et 80 cm
+  float distance = (-5*voltage*voltage -10*voltage + 66.25); //valable entre 5 et 80 cm
   //cout<<voltage<<endl;
   return distance;
 }

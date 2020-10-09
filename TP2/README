@@ -33,7 +33,7 @@ parm: parm:parametre entier (int)
 Cette ligne créé le fichier "mychar" dans le dossier ./dev :
 ret = register_chrdev(major, "mychar", &char_fops);
 
-ls -l nous donne ceci pour le fichier "mychar":
+ls -l dans le dossier ./dev nous donne ceci pour le fichier "mychar":
 crw-------  1 root root    240,   0 oct.   8 16:30 mychar
 La majeur de "mychar" est donc 240 et sa mineur est 0
 La définition de la majeur de "mychar" est effectuée grâce à ces lignes :

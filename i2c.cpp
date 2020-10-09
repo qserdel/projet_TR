@@ -5,16 +5,19 @@
 
 using namespace std;
 
-
-
-int main()
-{
-  uint16_t data;
+int getDistance(){
   int fd = wiringPiI2CSetup(0x04);
   if (wiringPiI2CWrite (fd, 0x30+1) < 0)
     return (-1) ;
+  return (int)wiringPiI2CReadReg16(fd,0x30+1);
+}
+
+int main()
+{
+  int distance;
   while(1){
-    cout<<wiringPiI2CReadReg16(fd,0x30+1)<<endl;
+    distance=getDistance();
+    cout<<distance<<endl;
     delay(20);
   }
   return 0;

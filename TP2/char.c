@@ -47,7 +47,7 @@ static int char_release(struct inode *inode, struct file *file)
 }
 static long char_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 {
-  printk("char ioctl");
+  printk("enabling ioctl");
   return 0;
 }
 static struct file_operations char_fops = {

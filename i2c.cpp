@@ -3,13 +3,16 @@
 #include <iostream>
 #include <unistd.h>
 
+static int i2c_pin = 1;
+
 using namespace std;
 
 float getDistance(){
+  
   int fd = wiringPiI2CSetup(0x04);
-  if (wiringPiI2CWrite (fd, 0x30+1) < 0)
+  if (wiringPiI2CWrite (fd, 0x30+i2c_pin) < 0)
     return (-1) ;
-  int value = (int)wiringPiI2CReadReg16(fd,0x30+1);
+  int value = (int)wiringPiI2CReadReg16(fd,0x30+i2c_pin);
   float voltage = value*3.3/1024;
   close(fd);
   float distance = (-56*voltage*voltage + 143*voltage + 2.4); //valable entre 5 et 80 cm
@@ -25,14 +28,3 @@ int main()
   }
   return 0;
 }
-
-/*{
-  wiringPiSetup();
-  pinMode(2, INPUT);		// Configure GPIO06 as an output
-  while(1){
-    cout<<digitalRead(2)<<endl;
-    delay(50);
-  }
-  return 0;
-
-}*/

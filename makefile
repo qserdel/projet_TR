@@ -1,5 +1,10 @@
-all: gpio pwm camOpen i2c
+obj-m:=driver_interruption.o
+KDIR := /lib/modules/$(shell uname -r)/build
 
+all: gpio pwm camOpen i2c drivers
+
+drivers: main_char
+	$(MAKE) -C $(KDIR) SUBDIRS=$(shell pwd) modules
 
 gpio: gpio.cpp
 	g++ -o gpio gpio.cpp -lwiringPi
@@ -15,4 +20,4 @@ i2c: i2c.cpp
 
 
 clean:
-	rm -f pwm gpio camOpen i2c
+	rm -f pwm gpio camOpen i2c *.o *.ko

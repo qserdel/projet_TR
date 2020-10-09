@@ -2,7 +2,7 @@
 #include <softPwm.h>
 
 static int pin_m1 = 5; 	//pin gpio24
-static int pin_m2 = 25: //pin gpio26
+static int pin_m2 = 25; //pin gpio26
 
 int cam_motors_setup(){
 	if(wiringPiSetup()==-1) // Setup the library

@@ -3,7 +3,7 @@ KDIR := /lib/modules/$(shell uname -r)/build
 
 all: gpio pwm camOpen i2c drivers
 
-drivers: main_char
+drivers:
 	$(MAKE) -C $(KDIR) SUBDIRS=$(shell pwd) modules
 
 gpio: gpio.cpp

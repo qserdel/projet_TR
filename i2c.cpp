@@ -13,7 +13,7 @@ float getDistance(){
   float voltage = value*3.3/1024;
   close(fd);
   float distance = (-56*voltage*voltage + 143*voltage + 2.4); //valable entre 5 et 80 cm
-  cout<<voltage<<endl;
+  //cout<<voltage<<endl;
   return distance;
 }
 

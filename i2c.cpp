@@ -15,7 +15,7 @@ float getDistance(){
   int value = (int)wiringPiI2CReadReg16(fd,0x30+i2c_pin);
   float voltage = value*3.3/1024;
   close(fd);
-  float distance = (17*voltage*voltage -60*voltage + 90); //valable entre 5 et 80 cm
+  float distance = (17*voltage*voltage -75*voltage + 90); //valable entre 5 et 80 cm
   //cout<<voltage<<endl;
   return distance;
 }

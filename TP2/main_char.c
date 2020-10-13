@@ -20,10 +20,10 @@ int main(){
   if(fd==-1)
     printf(strerror(errno));
   write(fd,"Hello World!",12);
-  close(fd);
-  fd=open("/dev/mychar",'r');
+  /*close(fd);
+  /fd=open("/dev/mychar",'r');
   if(fd==-1)
-    printf(strerror(errno));
+    printf(strerror(errno));*/
   read(fd,buf,12);
   close(fd);
   printf((char*)buf);

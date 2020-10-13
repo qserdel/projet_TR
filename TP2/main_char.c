@@ -6,9 +6,9 @@
 #include <string.h>
 
 static int fd;
-static void* buf;
 
 int main(){
+  void* buf;
   errno=0;
   fd=open("/dev/mychar",'r');
   if(fd==-1)

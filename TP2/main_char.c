@@ -6,7 +6,7 @@
 static int fd;
 
 int main(){
-  fd=open("/dev/mychar",'w');
+  fd=open("~/../../dev/mychar",'w');
   if(fd==-1)
     printf("error in fopen");
   ioctl(fd,IOC_OUT);

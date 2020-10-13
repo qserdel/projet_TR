@@ -1,7 +1,7 @@
 obj-m:=module1.o char.o
 KDIR := /lib/modules/$(shell uname -r)/build
 
-default: main_char
+default: clean main_char
 	$(MAKE) -C $(KDIR) SUBDIRS=$(shell pwd) modules
 
 main_char:

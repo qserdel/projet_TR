@@ -35,6 +35,7 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
 {
   printk("writing char");
   copy_from_user(cbuf,buf,50);
+  printk(KERN_INFO "buffer : %d",*cbuf);
   return 0;
 }
 static int char_open(struct inode *inode, struct file *file)

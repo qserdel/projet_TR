@@ -13,5 +13,11 @@ int main(){
   if(fd==-1)
     printf(strerror(errno));
   ioctl(fd,IOC_OUT);
+  close(fd);
+  fd=open("/dev/mychar",'w');
+  if(fd==-1)
+    printf(strerror(errno));
+  write(fd,"Hello World!");
+  close(fd);
   return 0;
 }

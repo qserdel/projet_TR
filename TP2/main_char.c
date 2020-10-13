@@ -26,6 +26,6 @@ int main(){
     printf(strerror(errno));
   read(fd,buf,12);
   close(fd);
-  printf(buf);
+  printf(buf[1]);
   return 0;
 }

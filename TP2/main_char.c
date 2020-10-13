@@ -13,21 +13,21 @@ int main(){
   errno=0;
   fd=open("/dev/mychar",'r');
   if(fd==-1)
-    printf("%s\n",strerror(errno));
+    printf("open : %s\n",strerror(errno));
   if(ioctl(fd,IOC_OUT)==-1)
-    printf("%s\n",strerror(errno));
+    printf("ioctl : %s\n",strerror(errno));
   close(fd);
   fd=open("/dev/mychar",'w');
   if(fd==-1)
-    printf("%s\n",strerror(errno));
+    printf("open : %s\n",strerror(errno));
   if(write(fd,"Hello World!",12)==-1)
-    printf("%s\n",strerror(errno));
+    printf("write : %s\n",strerror(errno));
   close(fd);
   fd=open("/dev/mychar",'r');
   if(fd==-1)
-    printf("%s\n",strerror(errno));
+    printf("open : %s\n",strerror(errno));
   if(read(fd,buf,12)==-1)
-    printf("%s\n",strerror(errno));
+    printf("read : %s\n",strerror(errno));
   close(fd);
   printf(buf);
   return 0;

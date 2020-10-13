@@ -11,6 +11,7 @@
 #include <linux/cdev.h>
 #include <linux/device.h>         // Header to support the kernel Driver Model
 #include <linux/uaccess.h>
+#include <linux/wait.h>
 
 #define  DEVICE_NAME "mychar"    ///< The device will appear at /dev/mychar using this value
 #define  CLASS_NAME  "mychar"        ///< The device class -- this is a character device driv
@@ -32,13 +33,14 @@ static ssize_t char_read(struct file *file, char *buf, size_t count,
   if((err=copy_to_user(buf,cbuf,50))!=0)
     printk(KERN_ALERT "char not copied from user : %d\n",err);
   printk(KERN_INFO "sent : %s",buf);
-  memset(cbuf,NULL,50);
+  memset(cbuf,0,50);
   return count;
 }
 static ssize_t char_write(struct file *file, const char *buf, size_t count,
    loff_t *ppos)
 {
   printk(KERN_INFO "writing char");
+  memset(cbuf,0,50);
   if((err=copy_from_user(cbuf,buf,50))!=0)
     printk(KERN_ALERT "char not copied from user : %d\n",err);
   printk(KERN_INFO "buffer : %s",cbuf);

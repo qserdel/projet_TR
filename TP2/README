@@ -39,5 +39,3 @@ La majeur de "mychar" est donc 240 et sa mineur est 0
 La définition de la majeur de "mychar" est effectuée grâce à ces lignes :
 ret = register_chrdev(major, "mychar", &char_fops);
 major = ret;
-
-#question 2.6

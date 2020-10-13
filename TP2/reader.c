@@ -4,6 +4,7 @@
 #include <errno.h>
 #include <string.h>
 #include <unistd.h>
+#include <linux/wait.h>
 
 static int fd;
 char buf[50];

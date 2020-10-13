@@ -19,6 +19,7 @@ static struct class*  charClass  = NULL; ///< The device-driver class struct poi
 static struct device* charDevice = NULL; ///< The device-driver device struct pointer
 
 int major;
+int err;
 static char cbuf [50];
 
 /*
@@ -28,7 +29,8 @@ static ssize_t char_read(struct file *file, char *buf, size_t count,
   loff_t *ppos)
 {
   printk(KERN_INFO "reading char");
-  printk(KERN_INFO "char not copied from user : %d\n",copy_to_user(buf,cbuf,50));
+  if((err=copy_to_user(buf,cbuf,50))!=0)
+    printk(KERN_INFO "char not copied from user : %d\n",err);
   printk(KERN_INFO "sent : %s",buf);
   return count;
 }
@@ -36,7 +38,8 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
    loff_t *ppos)
 {
   printk(KERN_INFO "writing char");
-  printk(KERN_INFO "char not copied from user : %d\n",copy_from_user(cbuf,buf,50));
+  if((err=copy_from_user(cbuf,buf,50))!=0)
+    printk(KERN_INFO "char not copied from user : %d\n",err);
   printk(KERN_INFO "buffer : %s",cbuf);
   return 0;
 }

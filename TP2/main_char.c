@@ -26,6 +26,6 @@ int main(){
   if(read(fd,buf,12)==-1)
     printf("read : %s\n",strerror(errno));
   close(fd);
-  printf(buf);
+  printf("string recieved : %s\n",buf);
   return 0;
 }

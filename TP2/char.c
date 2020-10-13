@@ -30,7 +30,7 @@ static ssize_t char_read(struct file *file, char *buf, size_t count,
 {
   printk(KERN_INFO "reading char");
   if((err=copy_to_user(buf,cbuf,50))!=0)
-    printk(KERN_INFO "char not copied from user : %d\n",err);
+    printk(KERN_ALERT "char not copied from user : %d\n",err);
   printk(KERN_INFO "sent : %s",buf);
   return count;
 }
@@ -39,7 +39,7 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
 {
   printk(KERN_INFO "writing char");
   if((err=copy_from_user(cbuf,buf,50))!=0)
-    printk(KERN_INFO "char not copied from user : %d\n",err);
+    printk(KERN_ALERT "char not copied from user : %d\n",err);
   printk(KERN_INFO "buffer : %s",cbuf);
   return 0;
 }

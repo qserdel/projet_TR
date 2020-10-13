@@ -9,6 +9,6 @@ int main(){
   fd=open("/dev/mychar",'w');
   if(fd==-1)
     printf("error in fopen");
-  ioctl(fd,TIOCMODG);
+  ioctl(fd,IOC_OUT);
   return 0;
 }

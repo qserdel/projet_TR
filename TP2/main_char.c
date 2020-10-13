@@ -19,7 +19,7 @@ int main(){
   fd=open("/dev/mychar",'w');
   if(fd==-1)
     printf(strerror(errno));
-  write(fd,"Hello World!");
+  write(fd,"Hello World!",12);
   close(fd);
   fd=open("/dev/mychar",'r');
   if(fd==-1)

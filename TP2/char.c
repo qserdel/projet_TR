@@ -27,32 +27,32 @@ static char cbuf [50];
 static ssize_t char_read(struct file *file, char *buf, size_t count,
   loff_t *ppos)
 {
-  printk("reading char");
-  copy_to_user(buf,cbuf,50);
+  printk(KERN_INFO "reading char");
+  printk(KERN_INFO "char not copied from user : %d\n",copy_to_user(buf,cbuf,50));
   printk(KERN_INFO "sent : %s",buf);
   return count;
 }
 static ssize_t char_write(struct file *file, const char *buf, size_t count,
    loff_t *ppos)
 {
-  printk("writing char");
-  copy_from_user(cbuf,buf,50);
+  printk(KERN_INFO "writing char");
+  printk(KERN_INFO "char not copied from user : %d\n",copy_from_user(cbuf,buf,50);
   printk(KERN_INFO "buffer : %s",cbuf);
   return 0;
 }
 static int char_open(struct inode *inode, struct file *file)
 {
-  printk("opening char");
+  printk(KERN_INFO "opening char");
   return 0;
 }
 static int char_release(struct inode *inode, struct file *file)
 {
-  printk("releasing char");
+  printk(KERN_INFO "releasing char");
   return 0;
 }
 static long char_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 {
-  printk("enabling ioctl");
+  printk(KERN_INFO "enabling ioctl");
   return 0;
 }
 static struct file_operations char_fops = {

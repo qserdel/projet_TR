@@ -7,9 +7,9 @@
 #include <unistd.h>
 
 static int fd;
+void* buf;
 
 int main(){
-  void* buf;
   errno=0;
   fd=open("/dev/mychar",'r');
   if(fd==-1)

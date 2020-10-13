@@ -9,6 +9,6 @@ int main(){
   fd=open("/dev/mychar",'w');
   if(fd==-1)
     printf("error in fopen");
-  ioctl(fd,MEDIA_IOC_DEVICE_INFO);
+  ioctl(fd,TIOCMODG);
   return 0;
 }

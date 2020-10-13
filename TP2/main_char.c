@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 static int fd;
-char* buf;
+char buf[50];
 
 int main(){
   errno=0;

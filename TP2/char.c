@@ -19,7 +19,7 @@ static struct class*  charClass  = NULL; ///< The device-driver class struct poi
 static struct device* charDevice = NULL; ///< The device-driver device struct pointer
 
 int major;
-char cbuf [50];
+static char cbuf [50];
 
 /*
  * File operations

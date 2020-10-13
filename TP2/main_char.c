@@ -26,7 +26,7 @@ int main(){
   fd=open("/dev/mychar",'r');
   if(fd==-1)
     printf("%s\n",sterror(errno));
-  if(read(fd,buf,12)==-1))
+  if(read(fd,buf,12)==-1)
     printf("%s\n",sterror(errno));
   close(fd);
   printf(buf);

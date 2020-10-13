@@ -5,7 +5,7 @@ default: main_char
 	$(MAKE) -C $(KDIR) SUBDIRS=$(shell pwd) modules
 
 main_char:
-	gcc -Wall -o main_char main_char.c 
+	gcc -Wall -o main_char main_char.c
 
 clean:
-	rm -f *.[oas] .*.flags *.ko .*.cmd .*.d .*.tmp *.mod.c
+	rm -f *.[oas] .*.flags *.ko .*.cmd .*.d .*.tmp *.mod.c main_char

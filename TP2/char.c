@@ -18,7 +18,7 @@ static struct class*  charClass  = NULL; ///< The device-driver class struct poi
 static struct device* charDevice = NULL; ///< The device-driver device struct pointer
 
 int major;
-
+char cbuf [50];
 
 /*
  * File operations
@@ -33,6 +33,7 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
    loff_t *ppos)
 {
   printk("writing char");
+  buffer* = copy_from_user(cbuf,buf,50);
   return 0;
 }
 static int char_open(struct inode *inode, struct file *file)

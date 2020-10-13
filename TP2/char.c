@@ -10,7 +10,7 @@
 #include <linux/sched.h>
 #include <linux/cdev.h>
 #include <linux/device.h>         // Header to support the kernel Driver Model
-#include <uaccess.h>
+#include <linux/uaccess.h>
 
 #define  DEVICE_NAME "mychar"    ///< The device will appear at /dev/mychar using this value
 #define  CLASS_NAME  "mychar"        ///< The device class -- this is a character device driv

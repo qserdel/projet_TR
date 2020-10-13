@@ -19,13 +19,12 @@ int main(){
   fd=open("/dev/mychar",'w');
   if(fd==-1)
     printf(strerror(errno));
-  printf(write(fd,"Hello World!",12);
-  printf("\n");
+  printf("%d\n",write(fd,"Hello World!",12);
   close(fd);
   /fd=open("/dev/mychar",'r');
   if(fd==-1)
     printf(strerror(errno));
-  printf(read(fd,buf,12);
+  printf("%d\n",read(fd,buf,12);
   close(fd);
   printf(buf);
   return 0;

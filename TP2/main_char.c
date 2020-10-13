@@ -12,18 +12,18 @@ char* buf1="Hello World!";
 
 int main(){
   errno=0;
+  //test ioctl
   if((fd=open("/dev/mychar",O_RDWR))==-1)
     printf("open : %s\n",strerror(errno));
   if(ioctl(fd,IOC_OUT)==-1)
     printf("ioctl : %s\n",strerror(errno));
   close(fd);
+
+  //test write read
   if((fd=open("/dev/mychar",O_RDWR))==-1)
     printf("open : %s\n",strerror(errno));
   if(write(fd,buf1,12)==-1)
     printf("write : %s\n",strerror(errno));
-  close(fd);
-  if((fd=open("/dev/mychar",O_RDWR))==-1)
-    printf("open : %s\n",strerror(errno));
   if(read(fd,buf,12)==-1)
     printf("read : %s\n",strerror(errno));
   close(fd);

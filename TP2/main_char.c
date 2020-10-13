@@ -8,7 +8,6 @@
 
 static int fd;
 char* buf;
-char* buf1="Hello World!";
 
 int main(){
   errno=0;
@@ -22,7 +21,7 @@ int main(){
   //test write read
   if((fd=open("/dev/mychar",O_RDWR))==-1)
     printf("open : %s\n",strerror(errno));
-  if(write(fd,buf1,12)==-1)
+  if(write(fd,"Hello World!",12)==-1)
     printf("write : %s\n",strerror(errno));
   if(read(fd,buf,12)==-1)
     printf("read : %s\n",strerror(errno));

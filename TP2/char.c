@@ -28,7 +28,7 @@ static ssize_t char_read(struct file *file, char *buf, size_t count,
   loff_t *ppos)
 {
   printk("reading char");
-  copy_to_user(cbuf,buf,50);
+  copy_to_user(buf,cbuf,50);
   printk(KERN_INFO "sent : %s",buf);
   return count;
 }

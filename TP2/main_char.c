@@ -6,6 +6,7 @@
 #include <string.h>
 
 static int fd;
+static void* buf;
 
 int main(){
   errno=0;
@@ -18,6 +19,11 @@ int main(){
   if(fd==-1)
     printf(strerror(errno));
   write(fd,"Hello World!");
+  close(fd);
+  fd=open("/dev/mychar",'r');
+  if(fd==-1)
+    printf(strerror(errno));
+  read(fd,buf,12);
   close(fd);
   return 0;
 }

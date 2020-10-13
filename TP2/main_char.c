@@ -17,7 +17,7 @@ int main(){
   if(ioctl(fd,IOC_OUT)==-1)
     printf("ioctl : %s\n",strerror(errno));
   close(fd);
-  if((fd=open("/dev/mychar",'w'))==-1)
+  if((fd=open("/dev/mychar",'r'))==-1)
     printf("open : %s\n",strerror(errno));
   if(write(fd,buf1,12)==-1)
     printf("write : %s\n",strerror(errno));

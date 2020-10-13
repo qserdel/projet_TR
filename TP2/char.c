@@ -36,7 +36,7 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
    loff_t *ppos)
 {
   printk(KERN_INFO "writing char");
-  printk(KERN_INFO "char not copied from user : %d\n",copy_from_user(cbuf,buf,50);
+  printk(KERN_INFO "char not copied from user : %d\n",copy_from_user(cbuf,buf,50));
   printk(KERN_INFO "buffer : %s",cbuf);
   return 0;
 }

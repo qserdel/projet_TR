@@ -21,7 +21,7 @@ int main(){
     printf(strerror(errno));
   printf("%d\n",write(fd,"Hello World!",12));
   close(fd);
-  /fd=open("/dev/mychar",'r');
+  fd=open("/dev/mychar",'r');
   if(fd==-1)
     printf(strerror(errno));
   printf("%d\n",read(fd,buf,12));

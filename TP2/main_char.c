@@ -7,7 +7,8 @@
 #include <unistd.h>
 
 static int fd;
-char* buf="Hello World!";
+char* buf;
+char* buf1="Hello World!";
 
 int main(){
   errno=0;
@@ -20,7 +21,7 @@ int main(){
   fd=open("/dev/mychar",'w');
   if(fd==-1)
     printf("open : %s\n",strerror(errno));
-  if(write(fd,buf,12)==-1)
+  if(write(fd,buf1,12)==-1)
     printf("write : %s\n",strerror(errno));
   close(fd);
   fd=open("/dev/mychar",'r');

@@ -9,6 +9,6 @@ int main(){
   fd=fopen("/dev/mychar",'w');
   if(fd==-1)
     printf("error in fopen");
-  ioctl(fd);
+  ioctl(fd,FSCTL_DFS_GET-REFERRALS);
   return 0;
 }

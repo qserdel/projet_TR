@@ -13,7 +13,7 @@ int main(){
   //ecriture sur le fichier tmp/mychar
   if((fd=open("/tmp/mychar",O_WRONLY))==-1)
     printf("open : %s\n",strerror(errno));
-  if(write(fd,"Hello mychar!",20)==-1)
+  if(write(fd,"Hello mychar0!",20)==-1)
     printf("write : %s\n",strerror(errno));
   close(fd);
   //ecriture sur le fichier tmp/mychar1

@@ -40,7 +40,7 @@ static ssize_t char_read(struct file *file, char *buf, size_t count,
   printk(KERN_INFO "reading char");
   wait_event_interruptible(*wq,*flag);
   if((err=copy_to_user(buf,*cbuf,count))!=0)
-    printk(KERN_ALERT "char not copied from user : %d\n",err);
+    printk(KERN_ALERT "char not copied from user : %d",err);
   printk(KERN_INFO "sent : %s",buf);
   kfree(*cbuf);
   *flag=0;
@@ -56,16 +56,17 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
   if(!*cbuf)
     return -ENOMEM;
   if((err=copy_from_user(*cbuf,buf,count))!=0)
-    printk(KERN_ALERT "char not copied from user : %d\n",err);
+    printk(KERN_ALERT "char not copied from user : %d",err);
   printk(KERN_INFO "buffer : %s",*cbuf);
   *flag=1;
   wake_up_interruptible(wq);
+  printk(KERN_INFO "buffer0 : %s, buffer1 : %s",cbuf0,cbuf1);
   return 0;
 }
 static int char_open(struct inode *inode, struct file *file)
 {
   printk(KERN_INFO "opening char");
-  printk("minor : %u\n", iminor(inode));
+  printk("minor : %u", iminor(inode));
   switch(iminor(inode)){
     case 0:
       cbuf = &cbuf0;

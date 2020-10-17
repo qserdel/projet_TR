@@ -54,6 +54,7 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
     printk(KERN_ALERT "char not copied from user : %d\n",err);
   printk(KERN_INFO "buffer : %s",cbuf);
   flag=1;
+  kfree(buf);
   wake_up_interruptible(&wq);
   return 0;
 }

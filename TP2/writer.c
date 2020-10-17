@@ -11,7 +11,7 @@ char*buf;
 int main(int argc, char* argv[]){
 
   errno=0;
-  buf=malloc(sizeof(argv[0]));
+  buf=malloc(sizeof(argv[1]));
   if((fd=open("/dev/mychar",O_WRONLY))==-1)
     printf("open : %s\n",strerror(errno));
   if(write(fd,buf,sizeof(buf))==-1)

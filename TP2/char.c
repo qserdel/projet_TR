@@ -71,10 +71,12 @@ static int char_open(struct inode *inode, struct file *file)
       cbuf = &cbuf0;
       wq = &wq0;
       flag = &flag0;
+    break;
     case 1:
       cbuf = &cbuf1;
       wq = &wq1;
       flag = &flag1;
+    break;
   }
   return 0;
 }

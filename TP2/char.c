@@ -22,8 +22,11 @@ static struct device* charDevice = NULL; ///< The device-driver device struct po
 int major;
 int err;
 char* cbuf=NULL;
+char* cbuf1=NULL;
 static int flag = 0;
+static int flag1 = 0;
 static DECLARE_WAIT_QUEUE_HEAD(wq);
+static DECLARE_WAIT_QUEUE_HEAD(wq1);
 
 /*
  * File operations
@@ -31,31 +34,57 @@ static DECLARE_WAIT_QUEUE_HEAD(wq);
 static ssize_t char_read(struct file *file, char *buf, size_t count,
   loff_t *ppos)
 {
-  printk(KERN_INFO "reading char");
-  wait_event_interruptible(wq,flag);
-  if((err=copy_to_user(buf,cbuf,count))!=0)
-    printk(KERN_ALERT "char not copied from user : %d\n",err);
-  printk(KERN_INFO "sent : %s",buf);
-  kfree(cbuf);
-  flag=0;
-  return count;
+  switch(iminor(file){
+    case 0:
+      printk(KERN_INFO "reading char");
+      wait_event_interruptible(wq,flag);
+      if((err=copy_to_user(buf,cbuf,count))!=0)
+        printk(KERN_ALERT "char not copied from user : %d\n",err);
+      printk(KERN_INFO "sent : %s",buf);
+      kfree(cbuf);
+      flag=0;
+      return count;
+    case 1:
+      printk(KERN_INFO "reading char");
+      wait_event_interruptible(wq1,flag1);
+      if((err=copy_to_user(buf,cbuf1,count))!=0)
+        printk(KERN_ALERT "char not copied from user : %d\n",err);
+      printk(KERN_INFO "sent : %s",buf);
+      kfree(cbuf1);
+      flag1=0;
+      return count;
+  }
 }
 static ssize_t char_write(struct file *file, const char *buf, size_t count,
    loff_t *ppos)
 {
-  printk(KERN_INFO "writing char");
-  if(flag==1)
-    kfree(cbuf);
-  cbuf=kmalloc(count,GFP_KERNEL);
-  if(!cbuf){
-    return -ENOMEM;
-  }
-  if((err=copy_from_user(cbuf,buf,count))!=0)
-    printk(KERN_ALERT "char not copied from user : %d\n",err);
-  printk(KERN_INFO "buffer : %s",cbuf);
-  flag=1;
-  wake_up_interruptible(&wq);
-  return 0;
+  switch(iminor(file)){
+    case 0:
+      printk(KERN_INFO "writing char");
+      if(flag==1)
+        kfree(cbuf);
+      cbuf=kmalloc(count,GFP_KERNEL);
+      if(!cbuf)
+        return -ENOMEM;
+      if((err=copy_from_user(cbuf,buf,count))!=0)
+        printk(KERN_ALERT "char not copied from user : %d\n",err);
+      printk(KERN_INFO "buffer : %s",cbuf);
+      flag=1;
+      wake_up_interruptible(&wq);
+      return 0;
+    case 1:
+      printk(KERN_INFO "writing char");
+      if(flag1==1)
+        kfree(cbuf1);
+      cbuf=kmalloc(count,GFP_KERNEL);
+      if(!cbuf1)
+        return -ENOMEM;
+      if((err=copy_from_user(cbuf1,buf,count))!=0)
+        printk(KERN_ALERT "char not copied from user : %d\n",err);
+      printk(KERN_INFO "buffer : %s",cbuf);
+      flag1=1;
+      wake_up_interruptible(&wq1);
+      return 0;
 }
 static int char_open(struct inode *inode, struct file *file)
 {

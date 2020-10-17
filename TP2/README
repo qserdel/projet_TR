@@ -39,3 +39,17 @@ La majeur de "mychar" est donc 240 et sa mineur est 0
 La définition de la majeur de "mychar" est effectuée grâce à ces lignes :
 ret = register_chrdev(major, "mychar", &char_fops);
 major = ret;
+
+#question 2.6 à question 2.12
+
+Pour les questions relatives au fichier mychar les commandes bash à lancer (en su) sont :
+
+```
+make
+rmmod char
+insmod char.ko
+./main_char     pour le programme concernant les questions 2.7 à 2.9
+./writer        pour écrire "Hello World" dans le fichier mychar
+./reader        pour lire le contenu de mychar (bloquant si vide)
+
+```

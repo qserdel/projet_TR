@@ -33,7 +33,7 @@ static ssize_t char_read(struct file *file, char *buf, size_t count,
 {
   printk(KERN_INFO "reading char");
   wait_event_interruptible(wq,flag);
-  if((err=copy_to_user(buf,cbuf,size_t))!=0)
+  if((err=copy_to_user(buf,cbuf,count))!=0)
     printk(KERN_ALERT "char not copied from user : %d\n",err);
   printk(KERN_INFO "sent : %s",buf);
   free(buf);
@@ -45,8 +45,8 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
 {
   printk(KERN_INFO "writing char");
   free(buf);
-  buf=kmalloc(size_t*sizeof(char),GFP_KERNEL);
-  if((err=copy_from_user(cbuf,buf,size_t))!=0)
+  buf=kmalloc(count*sizeof(char),GFP_KERNEL);
+  if((err=copy_from_user(cbuf,buf,count))!=0)
     printk(KERN_ALERT "char not copied from user : %d\n",err);
   printk(KERN_INFO "buffer : %s",cbuf);
   flag=1;

@@ -1,4 +1,4 @@
-T/*
+/*
  * Includes
  */
 #include <linux/kernel.h>	/* printk() */

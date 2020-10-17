@@ -46,7 +46,6 @@ static ssize_t char_read(struct file *file, char *buf, size_t count,
   kfree(cbuf);
   flag=0;
   return count;
-  }
 }
 static ssize_t char_write(struct file *file, const char *buf, size_t count,
    loff_t *ppos)

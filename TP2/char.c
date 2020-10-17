@@ -21,7 +21,7 @@ static struct device* charDevice = NULL; ///< The device-driver device struct po
 
 int major;
 int err;
-char* cbuf;
+char* cbuf=NULL;
 static int flag = 0;
 static DECLARE_WAIT_QUEUE_HEAD(wq);
 
@@ -47,7 +47,6 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
   if(flag==1)
     kfree(cbuf);
   cbuf=kmalloc(count,GFP_KERNEL);
-  memset(cbuf,0,sizeof(cbuf));
   if(!cbuf){
     return -ENOMEM;
   }

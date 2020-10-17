@@ -46,7 +46,7 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
   printk(KERN_INFO "writing char");
   if(flag==1)
     kfree(buf);
-  buf=kmalloc(min_t(size_t,count),GFP_KERNEL);
+  buf=kmalloc(count,GFP_KERNEL);
   if(!buf){
     return -ENOMEM;
   }

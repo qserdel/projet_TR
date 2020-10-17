@@ -12,7 +12,7 @@ int main(){
   errno=0;
   if((fd=open("/dev/mychar",O_WRONLY))==-1)
     printf("open : %s\n",strerror(errno));
-  if(write(fd,"Hello World!",12)==-1)
+  if(write(fd,"",12)==-1)
     printf("write : %s\n",strerror(errno));
   close(fd);
   return 0;

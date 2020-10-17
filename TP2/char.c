@@ -28,7 +28,7 @@ static int flag = 0;
 static int flag0 = 0;
 static int flag1 = 0;
 static int current_flag;
-static wait_queue wq;
+static int wq;
 static DECLARE_WAIT_QUEUE_HEAD(wq0);
 static DECLARE_WAIT_QUEUE_HEAD(wq1);
 

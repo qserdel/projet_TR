@@ -34,7 +34,7 @@ static DECLARE_WAIT_QUEUE_HEAD(wq1);
 static ssize_t char_read(struct file *file, char *buf, size_t count,
   loff_t *ppos)
 {
-  switch(iminor(file){
+  switch(iminor(file)){
     case 0:
       printk(KERN_INFO "reading char");
       wait_event_interruptible(wq,flag);

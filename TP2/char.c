@@ -44,7 +44,8 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
    loff_t *ppos)
 {
   printk(KERN_INFO "writing char");
-  kfree(buf);
+  if(flag==1)
+    kfree(buf);
   buf=kmalloc(count*sizeof(char),GFP_KERNEL);
   if((err=copy_from_user(cbuf,buf,count))!=0)
     printk(KERN_ALERT "char not copied from user : %d\n",err);

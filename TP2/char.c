@@ -22,8 +22,8 @@ static struct device* charDevice = NULL; ///< The device-driver device struct po
 int major;
 int err;
 char* cbuf;
-char* cbuf0=NULL;
-char* cbuf1=NULL;
+char* cbuf0;
+char* cbuf1;
 static int flag = 0;
 static int flag0 = 0;
 static int flag1 = 0;
@@ -68,11 +68,11 @@ static int char_open(struct inode *inode, struct file *file)
   printk("minor : %u\n", iminor(inode));
   switch(iminor(inode)){
     case 0:
-      &cbuf -> cbuf0;
+      cbuf = cbuf0;
       wq = wq0;
       flag = flag0;
     case 1:
-      &cbuf -> cbuf1;
+      cbuf = cbuf1;
       wq = wq1;
       flag = flag1;
   }

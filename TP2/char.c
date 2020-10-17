@@ -68,13 +68,13 @@ static int char_open(struct inode *inode, struct file *file)
   printk("minor : %u\n", iminor(inode));
   switch(iminor(inode)){
     case 0:
-      cbuf = cbuf0;
-      wq = wq0;
-      flag = flag0;
+      &cbuf = &cbuf0;
+      &wq = &wq0;
+      &flag = &flag0;
     case 1:
-      cbuf = cbuf1;
-      wq = wq1;
-      flag = flag1;
+      &cbuf = &cbuf1;
+      &wq = &wq1;
+      &flag = &flag1;
   }
   return 0;
 }

@@ -21,13 +21,13 @@ static struct device* charDevice = NULL; ///< The device-driver device struct po
 
 int major;
 int err;
-char* cbuf;
+char** cbuf;
 char* cbuf0;
 char* cbuf1;
-static int flag = 0;
+static int* flag = 0;
 static int flag0 = 0;
 static int flag1 = 0;
-static struct wait_queue_head wq;
+static struct wait_queue_head* wq;
 static DECLARE_WAIT_QUEUE_HEAD(wq0);
 static DECLARE_WAIT_QUEUE_HEAD(wq1);
 
@@ -38,28 +38,28 @@ static ssize_t char_read(struct file *file, char *buf, size_t count,
   loff_t *ppos)
 {
   printk(KERN_INFO "reading char");
-  wait_event_interruptible(wq,flag);
-  if((err=copy_to_user(buf,cbuf,count))!=0)
+  wait_event_interruptible(*wq,*flag);
+  if((err=copy_to_user(buf,*cbuf,count))!=0)
     printk(KERN_ALERT "char not copied from user : %d\n",err);
   printk(KERN_INFO "sent : %s",buf);
-  kfree(cbuf);
-  flag=0;
+  kfree(*cbuf);
+  *flag=0;
   return count;
 }
 static ssize_t char_write(struct file *file, const char *buf, size_t count,
    loff_t *ppos)
 {
   printk(KERN_INFO "writing char");
-  if(flag==1)
-    kfree(cbuf);
-  cbuf=kmalloc(count,GFP_KERNEL);
-  if(!cbuf)
+  if(*flag==1)
+    kfree(*cbuf);
+  *cbuf=kmalloc(count,GFP_KERNEL);
+  if(!*cbuf)
     return -ENOMEM;
-  if((err=copy_from_user(cbuf,buf,count))!=0)
+  if((err=copy_from_user(*cbuf,buf,count))!=0)
     printk(KERN_ALERT "char not copied from user : %d\n",err);
-  printk(KERN_INFO "buffer : %s",cbuf);
-  flag=1;
-  wake_up_interruptible(&wq);
+  printk(KERN_INFO "buffer : %s",*cbuf);
+  *flag=1;
+  wake_up_interruptible(wq);
   return 0;
 }
 static int char_open(struct inode *inode, struct file *file)
@@ -68,13 +68,13 @@ static int char_open(struct inode *inode, struct file *file)
   printk("minor : %u\n", iminor(inode));
   switch(iminor(inode)){
     case 0:
-      &cbuf = &cbuf0;
-      &wq = &wq0;
-      &flag = &flag0;
+      cbuf = &cbuf0;
+      wq = &wq0;
+      flag = &flag0;
     case 1:
-      &cbuf = &cbuf1;
-      &wq = &wq1;
-      &flag = &flag1;
+      cbuf = &cbuf1;
+      wq = &wq1;
+      flag = &flag1;
   }
   return 0;
 }

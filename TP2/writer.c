@@ -6,15 +6,13 @@
 #include <unistd.h>
 
 static int fd;
-char*buf;
 
-int main(int argc, char* argv[]){
+int main(){
 
   errno=0;
-  buf=malloc(sizeof(argv[1]));
   if((fd=open("/dev/mychar",O_WRONLY))==-1)
     printf("open : %s\n",strerror(errno));
-  if(write(fd,buf,sizeof(buf))==-1)
+  if(write(fd,"Hello World!",12)==-1)
     printf("write : %s\n",strerror(errno));
   close(fd);
   return 0;

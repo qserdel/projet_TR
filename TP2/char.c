@@ -47,7 +47,7 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
   if(flag==1)
     kfree(cbuf);
   cbuf=kmalloc(count,GFP_KERNEL);
-  memset(cbuf,0,sizeof(cbuf));
+  memset(cbuf,0,sizeof(&cbuf));
   if(!cbuf){
     return -ENOMEM;
   }

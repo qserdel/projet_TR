@@ -46,7 +46,10 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
   printk(KERN_INFO "writing char");
   if(flag==1)
     kfree(buf);
-  buf=kmalloc(count*sizeof(char),GFP_USER);
+  buf=kmalloc(min_t(size_t,count,PP_BUFFER_SIZE),GFP_KERNEL);
+  if(!buf){
+    return -ENOMEM;
+  }
   if((err=copy_from_user(cbuf,buf,count))!=0)
     printk(KERN_ALERT "char not copied from user : %d\n",err);
   printk(KERN_INFO "buffer : %s",cbuf);

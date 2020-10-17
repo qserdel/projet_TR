@@ -60,6 +60,7 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
 static int char_open(struct inode *inode, struct file *file)
 {
   printk(KERN_INFO "opening char");
+  pritnk(iminor(inode));
   return 0;
 }
 static int char_release(struct inode *inode, struct file *file)

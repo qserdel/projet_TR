@@ -11,14 +11,14 @@ char buf[50];
 int main(){
   errno=0;
   //lecture sur le fichier dev/mychar
-  if((fd=open("/dev/mychar",O_RDONLY))==-1)
+  if((fd=open("/tmp/mychar",O_RDONLY))==-1)
     printf("open : %s\n",strerror(errno));
   if(read(fd,buf,20)==-1)
     printf("read : %s\n",strerror(errno));
   close(fd);
   printf("string recieved : %s\n",buf);
   //lecture sur le fichier dev/mychar1
-  if((fd=open("/dev/mychar1",O_RDONLY))==-1)
+  if((fd=open("/tmp/mychar1",O_RDONLY))==-1)
     printf("open : %s\n",strerror(errno));
   if(read(fd,buf,20)==-1)
     printf("read : %s\n",strerror(errno));

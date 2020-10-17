@@ -23,6 +23,6 @@ int main(){
   if(read(fd,buf,20)==-1)
     printf("read : %s\n",strerror(errno));
   close(fd);
-  printf("string recieved : %s\n",buf);
-  return 0;*/
+  printf("string recieved : %s\n",buf);*/
+  return 0;
 }

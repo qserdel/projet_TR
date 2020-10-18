@@ -53,6 +53,7 @@ static ssize_t char_read(struct file *file, char *buf, size_t count,
       kfree(cbuf1);
       flag1=0;
     break;
+  }
   return count;
 }
 static ssize_t char_write(struct file *file, const char *buf, size_t count,
@@ -84,7 +85,7 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
       flag1=1;
       wake_up_interruptible(&wq1);
     break;
-    }
+  }
   return 0;
 }
 static int char_open(struct inode *inode, struct file *file)

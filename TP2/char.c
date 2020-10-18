@@ -90,7 +90,7 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
 static int char_open(struct inode *inode, struct file *file)
 {
   printk(KERN_INFO "opening char");
-  minor = iminor(iode);
+  minor = iminor(inode);
   printk("minor : %u", minor);
   return 0;
 }

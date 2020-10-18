@@ -18,11 +18,11 @@ int main(){
   close(fd);
   printf("string recieved : %s\n",buf);
   //lecture sur le fichier tmp/mychar1
-  /*if((fd=open("/tmp/mychar1",O_RDONLY))==-1)
+  if((fd=open("/tmp/mychar1",O_RDONLY))==-1)
     printf("open : %s\n",strerror(errno));
   if(read(fd,buf,20)==-1)
     printf("read : %s\n",strerror(errno));
   close(fd);
-  printf("string recieved : %s\n",buf);*/
+  printf("string recieved : %s\n",buf);
   return 0;
 }

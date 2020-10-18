@@ -38,7 +38,7 @@ static ssize_t char_read(struct file *file, char *buf, size_t count,
   printk(KERN_INFO "reading char");
   switch(minor){
     case 0:
-      wait_event_interruptible(wq0,flag);
+      wait_event_interruptible(wq0,flag0);
       if((err=copy_to_user(buf,cbuf0,count))!=0)
         printk(KERN_ALERT "char not copied from user : %d",err);
       printk(KERN_INFO "sent : %s",buf);
@@ -46,7 +46,7 @@ static ssize_t char_read(struct file *file, char *buf, size_t count,
       flag0=0;
     break;
     case 1:
-      wait_event_interruptible(wq1,flag);
+      wait_event_interruptible(wq1,flag1);
       if((err=copy_to_user(buf,cbuf1,count))!=0)
         printk(KERN_ALERT "char not copied from user : %d",err);
       printk(KERN_INFO "sent : %s",buf);

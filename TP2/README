@@ -19,7 +19,7 @@ modinfo module1.ko
 on obtient :
 filename:       /home/pi/Desktop/projet_TR/TP2/module1.ko
 description:    Driver TP
-author:         Quentin Serdel
+author:         Quentin Serdel et Dina Ahmim
 license:        GPL
 
 #question 2.4

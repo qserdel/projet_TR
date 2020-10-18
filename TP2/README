@@ -48,6 +48,8 @@ Pour les questions relatives au fichier mychar les commandes bash à lancer (en 
 make
 rmmod char
 insmod char.ko
+sudo mknod -m 666 /tmp/mychar c 240 0       création d'un fichier temporaire (modifier la majeure si carte différente) avec mineure 0
+sudo mknod -m 666 /tmp/mychar1 c 240 1      création d'un fichier temporaire (modifier la majeure si carte différente) avec mineure 1
 ./main_char     pour le programme concernant les questions 2.7 à 2.9
 ./writer        pour écrire "Hello World" dans le fichier mychar
 ./reader        pour lire le contenu de mychar (bloquant si vide)

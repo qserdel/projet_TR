@@ -63,7 +63,7 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
     case 0:
       if(flag0==1)
         kfree(cbuf0);
-      cbuf=kmalloc(count,GFP_KERNEL);
+      cbuf0=kmalloc(count,GFP_KERNEL);
       if(!cbuf0)
         return -ENOMEM;
       if((err=copy_from_user(cbuf0,buf,count))!=0)
@@ -75,7 +75,7 @@ static ssize_t char_write(struct file *file, const char *buf, size_t count,
     case 1:
       if(flag1==1)
         kfree(cbuf1);
-      cbuf=kmalloc(count,GFP_KERNEL);
+      cbuf1=kmalloc(count,GFP_KERNEL);
       if(!cbuf1)
         return -ENOMEM;
       if((err=copy_from_user(cbuf1,buf,count))!=0)

@@ -1,0 +1,7 @@
+#Question 1
+
+position désirée -> contrôleur -> commande moteur (signal binaire)
+
+# Question 2
+
+voici le squelette minimal d'un composant trouvé sur la documentation OROCOS :

@@ -1,0 +1,57 @@
+#question 2.1
+
+commandes pour compiler, charger le module "module1", faire apparaitre la liste des modules puis le décharger (en tant que su):
+make
+insmod module1.ko
+lsmod
+rmmod module1
+
+#question 2.2
+
+Commande pour vérifier qu'on a bien print "Hello World!" dans le log du kernel :
+tail -f /var/log/kern.log
+
+#question 2.3
+
+Commande pour afficher les infos définies pour le module "module1" :
+modinfo module1.ko
+
+on obtient :
+filename:       /home/pi/Desktop/projet_TR/TP2/module1.ko
+description:    Driver TP
+author:         Quentin Serdel
+license:        GPL
+
+#question 2.4
+
+en lançant la commande tail -f /var/log/kern.log on a bien "param = 9"
+dans modinfo, on trouve :
+parm: parm:parametre entier (int)
+
+#question 2.5
+
+Cette ligne créé le fichier "mychar" dans le dossier ./dev :
+ret = register_chrdev(major, "mychar", &char_fops);
+
+ls -l dans le dossier ./dev nous donne ceci pour le fichier "mychar":
+crw-------  1 root root    240,   0 oct.   8 16:30 mychar
+La majeur de "mychar" est donc 240 et sa mineur est 0
+La définition de la majeur de "mychar" est effectuée grâce à ces lignes :
+ret = register_chrdev(major, "mychar", &char_fops);
+major = ret;
+
+#question 2.6 à question 2.12
+
+Pour les questions relatives au fichier mychar les commandes bash à lancer (en su) sont :
+
+```
+make
+rmmod char
+insmod char.ko
+sudo mknod -m 666 /tmp/mychar c 240 0       création d'un fichier temporaire (modifier la majeure si carte différente) avec mineure 0
+sudo mknod -m 666 /tmp/mychar1 c 240 1      création d'un fichier temporaire (modifier la majeure si carte différente) avec mineure 1
+./main_char     pour le programme concernant les questions 2.7 à 2.9
+./writer        pour écrire "Hello World" dans le fichier mychar
+./reader        pour lire le contenu de mychar (bloquant si vide)
+
+```

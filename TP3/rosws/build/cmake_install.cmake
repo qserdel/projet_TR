@@ -131,6 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/polytech/Bureau/projet_TR/TP3/rosws/build/gtest/cmake_install.cmake")
+  include("/home/polytech/Bureau/projet_TR/TP3/rosws/build/Controller/cmake_install.cmake")
 
 endif()
 

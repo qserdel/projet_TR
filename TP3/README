@@ -5,3 +5,46 @@ position désirée -> contrôleur -> commande moteur (signal binaire)
 # Question 2
 
 voici le squelette minimal d'un composant trouvé sur la documentation OROCOS :
+
+#include <rtt/TaskContext.hpp>
+#include <rtt/Component.hpp>
+using namespace RTT;
+class MyTask : public TaskContext
+{
+public:
+  ATask(const std::string& name) : public TaskContext(name) {}
+};
+
+##Commandes bash :
+
+#initialiser le workspace :
+
+source /opt/ros/melodic/setup.bash
+mkdir -p rosws/src
+cd rosws/src
+catkin_init_workspace
+cd ..
+catkin_make
+source devel/setup.bash
+source /opt/ros/melodic/setup.bash
+source ~rosws/devel/setup.bash
+
+#Créer un squelette de composant :
+
+cd src
+orocreate-catkin-pkg NomComposant component
+
+#compiler le composant :
+
+cd ..
+catkin_make clean
+catkin_make
+catkin_make install
+source devel/setup.bash
+
+#charger le composant dans le deployer :
+
+deployer-gnulinux
+> import("NomComposant")
+> displayComponentTypes()             pour s'assurer que le composant est bien reconnu
+> loadComponent("C1", "NomComposant") pour créer une instance du composant

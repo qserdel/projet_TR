@@ -1,0 +1,6 @@
+require("print");        // necessary for 'print.ln'
+import("Controller");    // 'Controller' is a directory name to import
+print.ln("Script imported Controller package:");
+displayComponentTypes(); // Function of the DeploymentComponent
+loadComponent("C1", "Controller"); // Creates a new component of type 'Controller'
+print.ln("Script created C1 Component with period: " + C1.getPeriod() );

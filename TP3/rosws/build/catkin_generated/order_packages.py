@@ -2,4 +2,4 @@
 source_root_dir = '/home/polytech/Bureau/projet_TR/TP3/rosws/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/opt/ros/melodic'.split(';') if '/opt/ros/melodic' != '' else []
+underlay_workspaces = '/home/polytech/rosws/devel;/home/polytech/ws/underlay/devel;/home/polytech/ws/underlay_isolated/install_isolated;/opt/ros/melodic'.split(';') if '/home/polytech/rosws/devel;/home/polytech/ws/underlay/devel;/home/polytech/ws/underlay_isolated/install_isolated;/opt/ros/melodic' != '' else []

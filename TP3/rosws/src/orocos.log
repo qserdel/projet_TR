@@ -1,0 +1,54 @@
+0.000 [ Info   ][Logger] No ORO_LOGLEVEL environment variable set.
+0.000 [ Info   ][Logger]  OROCOS version '2.9.0' compiled with GCC 7.5.0. Running in GNU/Linux.
+0.000 [ Info   ][Logger] Orocos Logging Activated at level : [ Warning] ( 4 ) 
+0.000 [ Info   ][Logger] Reference System Time is : 149289784639851 ticks ( 149290 seconds ).
+0.000 [ Info   ][Logger] Logging is relative to this time.
+0.000 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos . Searching in: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos
+0.000 [ Info   ][Logger] plugin 'rtt' not loaded before.
+0.000 [ Info   ][Logger] Loading plugin libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/./plugins ...
+0.000 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
+0.001 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
+0.001 [ Info   ][Logger] typekit 'rtt' not loaded before.
+0.001 [ Info   ][Logger] Loading typekit libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/./types ...
+0.002 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
+0.002 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
+0.045 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
+0.045 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
+0.045 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
+0.045 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for llong
+0.045 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for ullong
+0.045 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
+0.045 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
+0.045 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
+0.045 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
+0.045 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
+0.045 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
+0.045 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos . Searching in: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos
+0.045 [ Info   ][Logger] OCL factory set for real-time logging
+0.046 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='helloworld.cpp'
+0.046 [ Info   ][helloworld.cpp] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 17696 ).
+0.046 [ Info   ][Logger] No site file was found. Importing 'ocl' by default.
+0.046 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl ...
+0.048 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-logging-gnulinux.so'
+0.049 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-common-gnulinux.so'
+0.051 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::logging::Log4cxxAppender'
+0.058 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-netcdf-gnulinux.so'
+0.058 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::NetcdfReporting'
+0.060 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-timer-gnulinux.so'
+0.061 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::HelloWorld'
+0.061 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-gnulinux.so'
+0.061 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/types ...
+0.064 [ Info   ][TypekitRepository::Import] Loading Typekit OCLTypekit.
+0.064 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'OCLTypekit' from 'ocl'
+0.064 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/plugins ...
+0.065 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'os' from 'os'
+0.066 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'print' from 'print'
+0.066 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='TaskBrowser'
+0.066 [ Info   ][TaskBrowser] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 17697 ).
+0.066 [ Info   ][Logger] Entering Task helloworld.cpp
+12.618 [ Info   ][Logger] Ignoring deployment shutdown function due to missing peer.
+12.618 [ Info   ][stopComponentsGroup] Stopping group 0
+12.618 [ Info   ][cleanupComponentsGroup] Cleaning up group 0
+12.618 [ Info   ][Logger] Unloading group 0
+12.618 [ Info   ][Logger] Kick-out of group 0 successful.
+12.618 [ Info   ][Logger] Orocos Logging Deactivated.

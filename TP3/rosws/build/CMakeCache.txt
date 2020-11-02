@@ -209,6 +209,15 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Value Computed by CMake
+Controller_BINARY_DIR:STATIC=/home/polytech/Bureau/projet_TR/TP3/rosws/build/Controller
+
+//Dependencies for the target
+Controller_LIB_DEPENDS:STATIC=general;imported_orocos-rtt-gnulinux_dynamic;
+
+//Value Computed by CMake
+Controller_SOURCE_DIR:STATIC=/home/polytech/Bureau/projet_TR/TP3/rosws/src/Controller
+
 //Path to a program.
 DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
 
@@ -239,6 +248,15 @@ GTEST_MAIN_LIBRARY:FILEPATH=GTEST_MAIN_LIBRARY-NOTFOUND
 //Path to a library.
 GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
 
+//Value Computed by CMake
+HelloWorld_BINARY_DIR:STATIC=/home/polytech/Bureau/projet_TR/TP3/rosws/build/HelloWorld
+
+//Dependencies for the target
+HelloWorld_LIB_DEPENDS:STATIC=general;imported_orocos-rtt-gnulinux_dynamic;
+
+//Value Computed by CMake
+HelloWorld_SOURCE_DIR:STATIC=/home/polytech/Bureau/projet_TR/TP3/rosws/src/HelloWorld
+
 //lsb_release executable was found
 LSB_FOUND:BOOL=TRUE
 
@@ -247,6 +265,28 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
+
+//The directory containing a CMake configuration file for OROCOS-RTT.
+OROCOS-RTT_DIR:PATH=/home/polytech/ws/underlay_isolated/install_isolated/lib/cmake/orocos-rtt
+
+//Disable automatic linking to targets in orocos_use_package()
+// or from dependencies in the package manifest. Auto-linking is
+// enabled by default.
+OROCOS_NO_AUTO_LINKING:BOOL=OFF
+
+//The Operating System target. One of [gnulinux lxrt macosx win32
+// xenomai]
+OROCOS_TARGET:STRING=gnulinux
+
+//Append directories in the linker search path and outside the
+// project to the INSTALL_RPATH
+ORO_INSTALL_RPATH_USE_LINK_PATH:BOOL=ON
+
+//Build packages with catkin develspace support.
+ORO_USE_CATKIN:BOOL=True
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python2
@@ -449,7 +489,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -490,6 +530,11 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Mark Controller-gnulinux package as an Orocos package built in
+// this workspace
+Controller-gnulinux_OROCOS_PACKAGE:INTERNAL=True
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python2][v2.7.17()]
 //Details about finding Threads
@@ -514,10 +559,40 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//Mark HelloWorld-gnulinux package as an Orocos package built in
+// this workspace
+HelloWorld-gnulinux_OROCOS_PACKAGE:INTERNAL=True
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+__pkg_config_checked_orogen_COMP_gnulinux:INTERNAL=1
+orogen_COMP_gnulinux_CFLAGS:INTERNAL=
+orogen_COMP_gnulinux_CFLAGS_I:INTERNAL=
+orogen_COMP_gnulinux_CFLAGS_OTHER:INTERNAL=
+orogen_COMP_gnulinux_FOUND:INTERNAL=
+orogen_COMP_gnulinux_INCLUDEDIR:INTERNAL=
+orogen_COMP_gnulinux_LIBDIR:INTERNAL=
+orogen_COMP_gnulinux_LIBS:INTERNAL=
+orogen_COMP_gnulinux_LIBS_L:INTERNAL=
+orogen_COMP_gnulinux_LIBS_OTHER:INTERNAL=
+orogen_COMP_gnulinux_LIBS_PATHS:INTERNAL=
+orogen_COMP_gnulinux_PREFIX:INTERNAL=
+orogen_COMP_gnulinux_STATIC_CFLAGS:INTERNAL=
+orogen_COMP_gnulinux_STATIC_CFLAGS_I:INTERNAL=
+orogen_COMP_gnulinux_STATIC_CFLAGS_OTHER:INTERNAL=
+orogen_COMP_gnulinux_STATIC_LIBDIR:INTERNAL=
+orogen_COMP_gnulinux_STATIC_LIBS:INTERNAL=
+orogen_COMP_gnulinux_STATIC_LIBS_L:INTERNAL=
+orogen_COMP_gnulinux_STATIC_LIBS_OTHER:INTERNAL=
+orogen_COMP_gnulinux_STATIC_LIBS_PATHS:INTERNAL=
+orogen_COMP_gnulinux_VERSION:INTERNAL=
+orogen_COMP_gnulinux_orogen-gnulinux_INCLUDEDIR:INTERNAL=
+orogen_COMP_gnulinux_orogen-gnulinux_LIBDIR:INTERNAL=
+orogen_COMP_gnulinux_orogen-gnulinux_PREFIX:INTERNAL=
+orogen_COMP_gnulinux_orogen-gnulinux_VERSION:INTERNAL=
 

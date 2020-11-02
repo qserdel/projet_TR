@@ -284,6 +284,32 @@ gtest/fast:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+#=============================================================================
+# Target rules for targets named uninstall
+
+# Build rule for target.
+uninstall: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 uninstall
+.PHONY : uninstall
+
+# fast build rule for target.
+uninstall/fast:
+	$(MAKE) -f Controller/CMakeFiles/uninstall.dir/build.make Controller/CMakeFiles/uninstall.dir/build
+.PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named Controller
+
+# Build rule for target.
+Controller: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Controller
+.PHONY : Controller
+
+# fast build rule for target.
+Controller/fast:
+	$(MAKE) -f Controller/src/CMakeFiles/Controller.dir/build.make Controller/src/CMakeFiles/Controller.dir/build
+.PHONY : Controller/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -306,6 +332,8 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... uninstall"
+	@echo "... Controller"
 .PHONY : help
 
 

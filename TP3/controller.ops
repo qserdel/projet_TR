@@ -1,6 +1,14 @@
 require("print");        // necessary for 'print.ln'
 import("Controller");    // 'Controller' is a directory name to import
-print.ln("Script imported Controller package:");
+
 displayComponentTypes(); // Function of the DeploymentComponent
+
 loadComponent("C1", "Controller"); // Creates a new component of type 'Controller'
+C1.setPeriod(1);
 print.ln("Script created C1 Component with period: " + C1.getPeriod() );
+
+if (C1.configure() == false)
+then
+  print.ln("C1 configuration failed !")
+else
+  C1.start()

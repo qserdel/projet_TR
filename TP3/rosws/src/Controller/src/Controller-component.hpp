@@ -2,6 +2,7 @@
 #define OROCOS_CONTROLLER_COMPONENT_HPP
 
 #include <rtt/RTT.hpp>
+#include <rtt/Port.hpp>
 
 class Controller : public RTT::TaskContext{
   public:
@@ -11,5 +12,8 @@ class Controller : public RTT::TaskContext{
     void updateHook();
     void stopHook();
     void cleanupHook();
+    RTT::InputPort<double> mesure;
+    RTT::OutputPort<double> cmd;
+    double des;
 };
 #endif

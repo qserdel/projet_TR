@@ -1,8 +1,9 @@
-#Question 1
+# Question 2.1
+                     .__________.
+position actuelle -> |contrôleur| -> commande moteur (signal binaire)
+position désirée  -> |__________|
 
-position désirée -> contrôleur -> commande moteur (signal binaire)
-
-# Question 2
+# Question 2.2
 
 voici le squelette minimal d'un composant trouvé sur la documentation OROCOS :
 
@@ -14,6 +15,8 @@ class MyTask : public TaskContext
 public:
   ATask(const std::string& name) : public TaskContext(name) {}
 };
+
+# Question 2.3
 
 ##Commandes bash :
 
@@ -37,7 +40,6 @@ orocreate-catkin-pkg NomComposant component
 #compiler le composant :
 
 cd ..
-catkin_make clean
 catkin_make
 catkin_make install
 source devel/setup.bash
@@ -48,3 +50,19 @@ deployer-gnulinux
 > import("NomComposant")
 > displayComponentTypes()             pour s'assurer que le composant est bien reconnu
 > loadComponent("C1", "NomComposant") pour créer une instance du composant
+
+# Question 2.4
+
+Lorsque l'on charge le composant sur le deployer, un fichier log se créé dans le dossier depuis lequel la commande est lancée
+En créant une instance du composant Controller, on a bien le message "Controller constructed !" dans le log, ce qui signifie
+que le composant a bien été construit.
+Lorsque l'on quitte le deployer, le composant est détruit, son cleanupHook() est appelé et le message
+"Controller cleaning up !" apparait dans le log orocos.
+
+# Question 2.5
+
+Les ports et attribut du controller s'est effectué sans souci.
+
+# Question 2.6
+
+pour exeuter le fichier controller.ops : deployer-gnulinux -s controller.ops

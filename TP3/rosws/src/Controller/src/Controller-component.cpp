@@ -4,6 +4,9 @@
 
 Controller::Controller(std::string const& name) : TaskContext(name){
   RTT::log(RTT::Info) << "Controller constructed !" <<RTT::endlog();
+  this->ports()->addPort("mesure",mesure);
+  this->ports()->addPort("cmd",cmd);
+  this->addAttribute("des",des);
 }
 
 bool Controller::configureHook(){
@@ -40,4 +43,5 @@ void Controller::cleanupHook() {
  * If you have put your component class
  * in a namespace, don't forget to add it here too:
  */
-ORO_CREATE_COMPONENT(Controller)
+ORO_CREATE_COMPONENT_LIBRARY()
+ORO_LIST_COMPONENT_TYPE(Controller)

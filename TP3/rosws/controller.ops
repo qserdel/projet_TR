@@ -1,0 +1,42 @@
+require("print");
+import("Controller");
+
+displayComponentTypes();
+
+loadComponent("C1", "Control::Controller");  // Creates a new component of type 'Controller'
+loadComponent("M1", "Control::Motor");       // Creates a new component of type 'Motor'
+
+C1.setPeriod(1);
+print.ln("Script created C1 Component with period: " + C1.getPeriod() );
+C1.des=20;
+C1.cmd=1;
+
+M1.setPeriod(1);
+print.ln("Script created M1 Component with period: " + M1.getPeriod() );
+M1.out=1;
+
+
+setActivity("C1", 0.5, 0 , ORO_SCHED_OTHER );
+setActivity("M1", 1, 0 , ORO_SCHED_OTHER );
+
+
+
+var ConnPolicy cp;
+cp.type = CIRCULAR_BUFFER;
+cp.size = 10;
+cp.lock_policy = LOCKED;
+connect("C1.cmd","M1.in", cp );
+connect("C1.cmd","M1.event", cp );
+connect("M1.out","C1.event", cp );
+
+if (C1.configure() == false)
+then
+  print.ln("C1 configuration failed !")
+else
+  C1.start()
+
+if (M1.configure() == false)
+then
+  print.ln("M1 configuration failed !")
+else
+  M1.start()

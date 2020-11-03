@@ -65,4 +65,5 @@ Les ports et attribut du controller s'est effectué sans souci.
 
 # Question 2.6
 
-pour exeuter le fichier controller.ops : deployer-gnulinux -s controller.ops
+pour exeuter le fichier controller.ops et afficher les logs orocos:
+deployer-gnulinux -s controller.ops -linfo

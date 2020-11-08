@@ -298,6 +298,19 @@ uninstall/fast:
 .PHONY : uninstall/fast
 
 #=============================================================================
+# Target rules for targets named Motor
+
+# Build rule for target.
+Motor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Motor
+.PHONY : Motor
+
+# fast build rule for target.
+Motor/fast:
+	$(MAKE) -f Controller/src/CMakeFiles/Motor.dir/build.make Controller/src/CMakeFiles/Motor.dir/build
+.PHONY : Motor/fast
+
+#=============================================================================
 # Target rules for targets named Controller
 
 # Build rule for target.
@@ -333,6 +346,7 @@ help:
 	@echo "... gtest_main"
 	@echo "... gtest"
 	@echo "... uninstall"
+	@echo "... Motor"
 	@echo "... Controller"
 .PHONY : help
 

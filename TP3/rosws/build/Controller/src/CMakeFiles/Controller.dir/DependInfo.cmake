@@ -18,6 +18,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/polytech/ws/underlay_isolated/install_isolated/include"
   "/home/polytech/ws/underlay_isolated/install_isolated/include/orocos"
+  "/home/polytech/ws/underlay/devel/include/orocos"
+  "/home/polytech/ws/underlay/src/rtt_ros_integration/rtt_ros/include"
+  "/opt/ros/melodic/include"
   )
 
 # Targets to which this target links.

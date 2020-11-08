@@ -68,6 +68,18 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -123,18 +135,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/polytech/Bureau/projet_TR/TP3/rosws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/polytech/Bureau/projet_TR/TP3/rosws/build/CMakeFiles /home/polytech/Bureau/projet_TR/TP3/rosws/build/Controller/src/CMakeFiles/progress.marks
@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+Controller/src/CMakeFiles/Motor.dir/rule:
+	cd /home/polytech/Bureau/projet_TR/TP3/rosws/build && $(MAKE) -f CMakeFiles/Makefile2 Controller/src/CMakeFiles/Motor.dir/rule
+.PHONY : Controller/src/CMakeFiles/Motor.dir/rule
+
+# Convenience name for target.
+Motor: Controller/src/CMakeFiles/Motor.dir/rule
+
+.PHONY : Motor
+
+# fast build rule for target.
+Motor/fast:
+	cd /home/polytech/Bureau/projet_TR/TP3/rosws/build && $(MAKE) -f Controller/src/CMakeFiles/Motor.dir/build.make Controller/src/CMakeFiles/Motor.dir/build
+.PHONY : Motor/fast
+
+# Convenience name for target.
 Controller/src/CMakeFiles/Controller.dir/rule:
 	cd /home/polytech/Bureau/projet_TR/TP3/rosws/build && $(MAKE) -f CMakeFiles/Makefile2 Controller/src/CMakeFiles/Controller.dir/rule
 .PHONY : Controller/src/CMakeFiles/Controller.dir/rule
@@ -188,6 +203,7 @@ Controller-component.o: Controller-component.cpp.o
 
 # target to build an object file
 Controller-component.cpp.o:
+	cd /home/polytech/Bureau/projet_TR/TP3/rosws/build && $(MAKE) -f Controller/src/CMakeFiles/Motor.dir/build.make Controller/src/CMakeFiles/Motor.dir/Controller-component.cpp.o
 	cd /home/polytech/Bureau/projet_TR/TP3/rosws/build && $(MAKE) -f Controller/src/CMakeFiles/Controller.dir/build.make Controller/src/CMakeFiles/Controller.dir/Controller-component.cpp.o
 .PHONY : Controller-component.cpp.o
 
@@ -197,6 +213,7 @@ Controller-component.i: Controller-component.cpp.i
 
 # target to preprocess a source file
 Controller-component.cpp.i:
+	cd /home/polytech/Bureau/projet_TR/TP3/rosws/build && $(MAKE) -f Controller/src/CMakeFiles/Motor.dir/build.make Controller/src/CMakeFiles/Motor.dir/Controller-component.cpp.i
 	cd /home/polytech/Bureau/projet_TR/TP3/rosws/build && $(MAKE) -f Controller/src/CMakeFiles/Controller.dir/build.make Controller/src/CMakeFiles/Controller.dir/Controller-component.cpp.i
 .PHONY : Controller-component.cpp.i
 
@@ -206,6 +223,7 @@ Controller-component.s: Controller-component.cpp.s
 
 # target to generate assembly for a file
 Controller-component.cpp.s:
+	cd /home/polytech/Bureau/projet_TR/TP3/rosws/build && $(MAKE) -f Controller/src/CMakeFiles/Motor.dir/build.make Controller/src/CMakeFiles/Motor.dir/Controller-component.cpp.s
 	cd /home/polytech/Bureau/projet_TR/TP3/rosws/build && $(MAKE) -f Controller/src/CMakeFiles/Controller.dir/build.make Controller/src/CMakeFiles/Controller.dir/Controller-component.cpp.s
 .PHONY : Controller-component.cpp.s
 
@@ -216,13 +234,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install"
+	@echo "... Motor"
+	@echo "... Controller"
 	@echo "... install/local"
 	@echo "... test"
-	@echo "... Controller"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... install"
 	@echo "... Controller-component.o"
 	@echo "... Controller-component.i"
 	@echo "... Controller-component.s"

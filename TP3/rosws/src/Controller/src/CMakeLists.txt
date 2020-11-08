@@ -10,7 +10,8 @@
 # Creates a component library libController-<target>.so
 # and installs in the directory lib/orocos/Controller/
 #
-orocos_component(Controller Controller-component.hpp Controller-component.cpp) # ...you may add multiple source files
+orocos_component(Controller Controller-component.hpp Controller-component.cpp)
+orocos_component(Motor Controller-component.hpp Controller-component.cpp) # ...you may add multiple source files
 #
 # You may add multiple orocos_component statements.
 

@@ -86,3 +86,5 @@ nous n'avons pas simulé réellement le fonctionnement d'un moteur. Nous avons p
 proposé une version (très) simplifiée suffisante pour mettre en lumière le bon fonctionnement de
 notre code : Le moteur renvoie simplement son entrée en sortie.
 Nous avons tout de même implémenté un contrôleur PID (inutile dans ce cas), pour la beauté de la chose.
+
+# Question 2.9

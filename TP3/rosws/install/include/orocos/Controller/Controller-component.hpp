@@ -3,6 +3,8 @@
 
 #include <rtt/RTT.hpp>
 #include <rtt/Port.hpp>
+#include <std_msgs/Float64.h>
+
 
 namespace Control {
   class Controller : public RTT::TaskContext{
@@ -13,9 +15,10 @@ namespace Control {
       void updateHook();
       void stopHook();
       void cleanupHook();
-      RTT::InputPort<double> mesure;
-      RTT::OutputPort<double> cmd;
-      RTT::InputPort<double> event;
+      RTT::InputPort<std_msgs::Float64> mesure;
+      RTT::OutputPort<std_msgs::Float64> cmd;
+      RTT::InputPort<std_msgs::Float64> event;
+      std_msgs::Float64 mesure_msg;
       double des;
       double buf;
       // paramêtres du PID
@@ -37,9 +40,10 @@ namespace Control {
       void updateHook();
       void stopHook();
       void cleanupHook();
-      RTT::InputPort<double> in;
-      RTT::OutputPort<double> out;
-      RTT::InputPort<double> event;
+      RTT::InputPort<std_msgs::Float64> in;
+      RTT::OutputPort<std_msgs::Float64> out;
+      RTT::InputPort<std_msgs::Float64> event;
+      std_msgs::Float64 in_msg;
       double buf;
   };
 }

@@ -1,6 +1,4 @@
 #include "Controller-component.hpp"
-#include <rtt/Component.hpp>
-#include <iostream>
 
 namespace Control {
   Controller::Controller(std::string const& name) : TaskContext(name){
@@ -18,7 +16,9 @@ namespace Control {
 
   bool Controller::startHook(){
     RTT::log(RTT::Info) << "Controller started !" <<RTT::endlog();
-    cmd.write(0);
+    std_msgs::Float64 cmd_msg;
+    cmd_msg.data = 0;
+    cmd.write(cmd_msg);
     se = 0;
     des = 20;
     // parametres du PID
@@ -32,7 +32,8 @@ namespace Control {
 
   void Controller::updateHook(){
     RTT::log(RTT::Info) << "Controller executes updateHook !" <<RTT::endlog();
-    mesure.read(buf);
+    mesure.read(mesure_msg);
+    buf = mesure_msg.data;
     // PID
     e = des-buf;
     //Integrateur
@@ -42,7 +43,10 @@ namespace Control {
     // Proportionnel
     buf = Kp*e + Ki*se + Ke*de;
     e_prec = e;
-    cmd.write(buf);
+
+    std_msgs::Float64 cmd_msg;
+    cmd_msg.data = buf;
+    cmd.write(cmd_msg);
 
 
     RTT::log(RTT::Info) << "Command = " << buf << RTT::endlog();
@@ -72,15 +76,19 @@ namespace Control {
     RTT::log(RTT::Info) << "Motor started !" <<RTT::endlog();
     if(!out.connected() || !in.connected())
       return false;
-    out.write(0);
+    std_msgs::Float64 out_msg;
+    out_msg.data = 0;
+    out.write(out_msg);
     return true;
   }
 
   void Motor::updateHook(){
     RTT::log(RTT::Info) << "Motor executes updateHook !" <<RTT::endlog();
-    in.read(buf);
-    out.write(buf);
+    in.read(in_msg);
+    buf = in_msg.data;
+    out.write(in_msg);
     RTT::log(RTT::Info) << "pos = " << buf << RTT::endlog();
+
   }
 
   void Motor::stopHook() {

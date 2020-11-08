@@ -65,16 +65,19 @@ La création des ports et attributs du controleur s'est effectuée sans souci.
 
 # Question 2.6
 
-pour exeuter le fichier controller.ops et afficher les logs orocos:
-deployer-gnulinux -s controller.ops -linfo
+Nous avons créé un second composant : Motor. Il servira à nous assurer que notre contrôleur
+envoie et récupère correctement les valeurs désirées sur ses ports.
 
 # Question 2.7
 
-
+Le déploiement s'effectue à l'aide du fichier controller.ops.
+Pour exeuter le fichier controller.ops et afficher les logs orocos:
+deployer-gnulinux -s controller.ops -linfo
 
 # Question 2.8
 
-Nous avons simulé le moteur en ajoutant un second composant à notre librairie : Motor.
+Comme expliqué à la question 2.6, nous avons simulé le moteur en ajoutant un
+second composant à notre librairie : Motor.
 Ce composant possède une entrée et une sortie.
 
 voici les connexions réalisées entre ces deux composants :
@@ -88,3 +91,7 @@ notre code : Le moteur renvoie simplement son entrée en sortie.
 Nous avons tout de même implémenté un contrôleur PID (inutile dans ce cas), pour la beauté de la chose.
 
 # Question 2.9
+
+Pour que les sorties de nos deux composants soient lisibles dans ROS, nous avons modifié les types du contenu de
+leurs ports en std_msgs::Float64, puis nous avons fait en sorte que les valeurs "mesure" et "commande" soient publiées
+respectivement dans les topics "/controller_command" et "/controller_mesure"

@@ -9,11 +9,14 @@
   <url type="website"></url>
   <!-- <url type="bugtracker"></url> -->
 
-  <author>Unknown Author</author>
+  <author>AHMIN Dina SERDEL Quentin</author>
 
   <build_depend>rtt</build_depend>
   <build_depend>orogen</build_depend>
   <run_depend>rtt</run_depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_depend>message_runtime</build_depend>
 
   <export>
 

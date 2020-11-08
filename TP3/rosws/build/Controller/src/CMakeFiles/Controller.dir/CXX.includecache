@@ -19,6 +19,10 @@ rtt/RTT.hpp
 -
 rtt/Port.hpp
 -
+ros/ros.h
+/home/polytech/Bureau/projet_TR/TP3/rosws/src/Controller/src/ros/ros.h
+std_msg/Float64.h
+/home/polytech/Bureau/projet_TR/TP3/rosws/src/Controller/src/std_msg/Float64.h
 
 /home/polytech/ws/underlay_isolated/install_isolated/include/rtt/Activity.hpp
 Time.hpp

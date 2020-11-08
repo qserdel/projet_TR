@@ -4,6 +4,7 @@
 #include <rtt/RTT.hpp>
 #include <rtt/Port.hpp>
 
+
 namespace Control {
   class Controller : public RTT::TaskContext{
     public:
@@ -17,6 +18,16 @@ namespace Control {
       RTT::OutputPort<double> cmd;
       RTT::InputPort<double> event;
       double des;
+      double buf;
+      // paramêtres du PID
+      double e;
+      double se;
+      double de;
+      double e_prec = 0;
+      double Kp;
+      double Ki;
+      double Ke;
+      double dt;
     };
 
   class Motor : public RTT::TaskContext{
@@ -30,6 +41,7 @@ namespace Control {
       RTT::InputPort<double> in;
       RTT::OutputPort<double> out;
       RTT::InputPort<double> event;
+      double buf;
   };
 }
 

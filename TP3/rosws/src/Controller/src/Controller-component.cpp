@@ -18,15 +18,34 @@ namespace Control {
 
   bool Controller::startHook(){
     RTT::log(RTT::Info) << "Controller started !" <<RTT::endlog();
+    cmd.write(0);
+    se = 0;
+    des = 20;
+    // parametres du PID
+    e_prec = 0;
+    Kp = 0.2;
+    Ki = 0.5;
+    Ke = 0.1;
+    dt = 1;
     return true;
   }
 
   void Controller::updateHook(){
     RTT::log(RTT::Info) << "Controller executes updateHook !" <<RTT::endlog();
-    if(mesure<des){
-      cmd.write(mesure+1);
-    }
-    RTT::log(RTT::Info) << "Command = %d !",cmd <<RTT::endlog();
+    mesure.read(buf);
+    // PID
+    e = des-buf;
+    //Integrateur
+    se += e*dt;
+    // Derivateur
+    de = (e - e_prec)/dt;
+    // Proportionnel
+    buf = Kp*e + Ki*se + Ke*de;
+    e_prec = e;
+    cmd.write(buf);
+
+
+    RTT::log(RTT::Info) << "Command = " << buf << RTT::endlog();
   }
 
   void Controller::stopHook() {
@@ -51,14 +70,17 @@ namespace Control {
 
   bool Motor::startHook(){
     RTT::log(RTT::Info) << "Motor started !" <<RTT::endlog();
+    if(!out.connected() || !in.connected())
+      return false;
+    out.write(0);
     return true;
   }
 
   void Motor::updateHook(){
     RTT::log(RTT::Info) << "Motor executes updateHook !" <<RTT::endlog();
-    double* var;
-    in.read(var);
-    out.write(var);
+    in.read(buf);
+    out.write(buf);
+    RTT::log(RTT::Info) << "pos = " << buf << RTT::endlog();
   }
 
   void Motor::stopHook() {

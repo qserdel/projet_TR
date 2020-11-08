@@ -1,78 +1,178 @@
 0.000 [ Info   ][Logger] No ORO_LOGLEVEL environment variable set.
 0.000 [ Info   ][Logger]  OROCOS version '2.9.0' compiled with GCC 7.5.0. Running in GNU/Linux.
 0.000 [ Info   ][Logger] Orocos Logging Activated at level : [ Warning] ( 4 ) 
-0.000 [ Info   ][Logger] Reference System Time is : 10424747587852 ticks ( 10424.7 seconds ).
+0.000 [ Info   ][Logger] Reference System Time is : 714353156462 ticks ( 714.353 seconds ).
 0.000 [ Info   ][Logger] Logging is relative to this time.
 0.000 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos . Searching in: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos
 0.000 [ Info   ][Logger] plugin 'rtt' not loaded before.
 0.000 [ Info   ][Logger] Loading plugin libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/./plugins ...
 0.000 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
-0.001 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
+0.000 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
 0.001 [ Info   ][Logger] typekit 'rtt' not loaded before.
 0.001 [ Info   ][Logger] Loading typekit libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/./types ...
 0.002 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
 0.002 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
-0.028 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
-0.028 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
-0.028 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
-0.028 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for llong
-0.028 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for ullong
-0.028 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
-0.028 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
-0.028 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
-0.028 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
-0.028 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
-0.029 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
-0.029 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos . Searching in: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos
-0.029 [ Info   ][Logger] OCL factory set for real-time logging
-0.029 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Deployer'
-0.029 [ Info   ][Deployer] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 5330 ).
-0.030 [ Info   ][Logger] No site file was found. Importing 'ocl' by default.
-0.030 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl ...
-0.037 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-logging-gnulinux.so'
-0.042 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-common-gnulinux.so'
-0.047 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::logging::Log4cxxAppender'
-0.052 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-netcdf-gnulinux.so'
-0.052 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::NetcdfReporting'
-0.053 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-timer-gnulinux.so'
-0.055 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::HelloWorld'
-0.055 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-gnulinux.so'
-0.055 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/types ...
-0.058 [ Info   ][TypekitRepository::Import] Loading Typekit OCLTypekit.
-0.058 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'OCLTypekit' from 'ocl'
-0.059 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/plugins ...
-0.062 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'os' from 'os'
-0.063 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'print' from 'print'
-0.063 [ Info   ][Logger] Loading Service or Plugin scripting in TaskContext Deployer
-0.063 [ Info   ][Logger] Found complete interface of requested service 'scripting'
-0.063 [ Info   ][Logger] Running Script controller.ops ...
-0.063 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
-0.064 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 5331 ).
+0.031 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
+0.031 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for llong
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for ullong
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
+0.032 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
+0.032 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
+0.032 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos . Searching in: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos
+0.032 [ Info   ][Logger] OCL factory set for real-time logging
+0.033 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Deployer'
+0.033 [ Info   ][Deployer] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 2962 ).
+0.034 [ Info   ][Logger] No site file was found. Importing 'ocl' by default.
+0.034 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl ...
+0.035 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-logging-gnulinux.so'
+0.036 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-common-gnulinux.so'
+0.039 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::logging::Log4cxxAppender'
+0.045 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-netcdf-gnulinux.so'
+0.045 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::NetcdfReporting'
+0.048 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-timer-gnulinux.so'
+0.050 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::HelloWorld'
+0.051 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-gnulinux.so'
+0.051 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/types ...
+0.053 [ Info   ][TypekitRepository::Import] Loading Typekit OCLTypekit.
+0.053 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'OCLTypekit' from 'ocl'
+0.054 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/plugins ...
+0.055 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'os' from 'os'
+0.056 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'print' from 'print'
+0.056 [ Info   ][Logger] Loading Service or Plugin scripting in TaskContext Deployer
+0.064 [ Info   ][Logger] Found complete interface of requested service 'scripting'
+0.064 [ Info   ][Logger] Running Script controller.ops ...
+0.064 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
+0.064 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 2963 ).
 0.065 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos/gnulinux/Controller ...
-0.068 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos/gnulinux/Controller/libController-gnulinux.so'
-0.069 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='C1'
-0.069 [ Info   ][C1] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 5332 ).
-0.069 [ Info   ][loadComponent] Controller constructed !
-0.069 [ Info   ][loadComponent] Adding C1 as new peer:  OK.
-0.069 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='M1'
-0.069 [ Info   ][M1] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 5333 ).
-0.070 [ Info   ][loadComponent] Motor constructed !
-0.070 [ Info   ][loadComponent] Adding M1 as new peer:  OK.
-0.070 [ ERROR  ][ScriptingService] controller.ops :Parse error at line 12: No method "" registered for the object or task "C1".
-0.071 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='TaskBrowser'
-0.071 [ Info   ][TaskBrowser] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 5334 ).
-0.071 [ Info   ][Logger] Entering Task Deployer
-115.375 [ Info   ][Logger] Ignoring deployment shutdown function due to missing peer.
-115.375 [ Info   ][stopComponentsGroup] Stopping group 0
-115.375 [ Info   ][stopComponentsGroup] Stopped M1
-115.375 [ Info   ][stopComponentsGroup] Stopped C1
-115.375 [ Info   ][cleanupComponentsGroup] Cleaning up group 0
-115.375 [ Info   ][cleanupComponentsGroup] Motor cleaning up !
-115.375 [ Info   ][cleanupComponentsGroup] Cleaned up M1
-115.375 [ Info   ][cleanupComponentsGroup] Controller cleaning up !
-115.375 [ Info   ][cleanupComponentsGroup] Cleaned up C1
-115.375 [ Info   ][Logger] Unloading group 0
-115.376 [ Info   ][Logger] Disconnected and destroyed M1
-115.376 [ Info   ][Logger] Disconnected and destroyed C1
-115.376 [ Info   ][Logger] Kick-out of group 0 successful.
-115.376 [ Info   ][Logger] Orocos Logging Deactivated.
+0.069 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos/gnulinux/Controller/libController-gnulinux.so'
+0.070 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='C1'
+0.070 [ Info   ][C1] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 2964 ).
+0.070 [ Info   ][loadComponent] Controller constructed !
+0.070 [ Info   ][loadComponent] Adding C1 as new peer:  OK.
+0.071 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='M1'
+0.071 [ Info   ][M1] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 2965 ).
+0.071 [ Info   ][loadComponent] Motor constructed !
+0.071 [ Info   ][loadComponent] Adding M1 as new peer:  OK.
+0.076 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=0, CPU affinity=4294967295, with name='C1'
+0.076 [ Info   ][C1] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 1 (PID= 2966 ).
+0.077 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=0, CPU affinity=4294967295, with name='M1'
+0.077 [ Info   ][M1] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 1 (PID= 2967 ).
+0.086 [ Info   ][connect] Connected Port C1.cmd to  M1.in.
+0.086 [ Info   ][connect] Connected Port C1.cmd to  M1.event.
+0.086 [ Info   ][connect] Connected Port M1.out to  C1.event.
+0.087 [ Info   ][ScriptingService] Controller configured !
+0.087 [ Info   ][ScriptingService] Controller started !
+0.089 [ Info   ][ScriptingService] Motor configured !
+0.089 [ Info   ][ScriptingService] Motor started !
+0.089 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='TaskBrowser'
+0.089 [ Info   ][TaskBrowser] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 2968 ).
+0.089 [ Info   ][Logger] Entering Task Deployer
+1.078 [ Info   ][Logger] Controller executes updateHook !
+1.078 [ Info   ][Logger] Command = 16
+1.078 [ Info   ][Logger] Motor executes updateHook !
+1.078 [ Info   ][Logger] pos = 0
+2.077 [ Info   ][Logger] Controller executes updateHook !
+2.077 [ Info   ][Logger] Command = 11.2
+2.077 [ Info   ][Logger] Motor executes updateHook !
+2.078 [ Info   ][Logger] pos = 16
+3.077 [ Info   ][Logger] Controller executes updateHook !
+3.077 [ Info   ][Logger] Command = 18.64
+3.077 [ Info   ][Logger] Motor executes updateHook !
+3.077 [ Info   ][Logger] pos = 11.2
+4.077 [ Info   ][Logger] Controller executes updateHook !
+4.078 [ Info   ][Logger] Command = 16.608
+4.078 [ Info   ][Logger] Motor executes updateHook !
+4.078 [ Info   ][Logger] pos = 18.64
+5.078 [ Info   ][Logger] Motor executes updateHook !
+5.078 [ Info   ][Logger] pos = 16.608
+5.078 [ Info   ][Logger] Controller executes updateHook !
+5.078 [ Info   ][Logger] Command = 19.6576
+6.078 [ Info   ][Logger] Motor executes updateHook !
+6.078 [ Info   ][Logger] pos = 19.6576
+6.078 [ Info   ][Logger] Controller executes updateHook !
+6.078 [ Info   ][Logger] Command = 18.7107
+7.077 [ Info   ][Logger] Motor executes updateHook !
+7.077 [ Info   ][Logger] pos = 18.7107
+7.077 [ Info   ][Logger] Controller executes updateHook !
+7.078 [ Info   ][Logger] Command = 19.9444
+8.078 [ Info   ][Logger] Motor executes updateHook !
+8.078 [ Info   ][Logger] Controller executes updateHook !
+8.078 [ Info   ][Logger] Command = 19.5074
+8.078 [ Info   ][Logger] pos = 19.9444
+9.078 [ Info   ][Logger] Motor executes updateHook !
+9.078 [ Info   ][Logger] pos = 19.5074
+9.078 [ Info   ][Logger] Controller executes updateHook !
+9.078 [ Info   ][Logger] Command = 20.0082
+10.078 [ Info   ][Logger] Motor executes updateHook !
+10.078 [ Info   ][Logger] pos = 20.0082
+10.078 [ Info   ][Logger] Controller executes updateHook !
+10.078 [ Info   ][Logger] Command = 19.8102
+11.078 [ Info   ][Logger] Controller executes updateHook !
+11.078 [ Info   ][Logger] Command = 20.0146
+11.079 [ Info   ][Logger] Motor executes updateHook !
+11.079 [ Info   ][Logger] pos = 19.8102
+12.079 [ Info   ][Logger] Motor executes updateHook !
+12.079 [ Info   ][Logger] pos = 20.0146
+12.080 [ Info   ][Logger] Controller executes updateHook !
+12.080 [ Info   ][Logger] Command = 19.9262
+13.078 [ Info   ][Logger] Controller executes updateHook !
+13.078 [ Info   ][Logger] Motor executes updateHook !
+13.078 [ Info   ][Logger] pos = 19.9262
+13.078 [ Info   ][Logger] Command = 20.01
+14.078 [ Info   ][Logger] Controller executes updateHook !
+14.078 [ Info   ][Logger] Command = 19.971
+14.079 [ Info   ][Logger] Motor executes updateHook !
+14.079 [ Info   ][Logger] pos = 20.01
+15.077 [ Info   ][Logger] Controller executes updateHook !
+15.077 [ Info   ][Logger] Command = 20.0056
+15.077 [ Info   ][Logger] Motor executes updateHook !
+15.077 [ Info   ][Logger] pos = 19.971
+16.077 [ Info   ][Logger] Controller executes updateHook !
+16.078 [ Info   ][Logger] Command = 19.9885
+16.078 [ Info   ][Logger] Motor executes updateHook !
+16.078 [ Info   ][Logger] pos = 20.0056
+17.077 [ Info   ][Logger] Controller executes updateHook !
+17.077 [ Info   ][Logger] Command = 20.0028
+17.078 [ Info   ][Logger] Motor executes updateHook !
+17.078 [ Info   ][Logger] pos = 19.9885
+18.078 [ Info   ][Logger] Motor executes updateHook !
+18.079 [ Info   ][Logger] Controller executes updateHook !
+18.079 [ Info   ][Logger] Command = 19.9954
+18.079 [ Info   ][Logger] pos = 20.0028
+19.077 [ Info   ][Logger] Controller executes updateHook !
+19.077 [ Info   ][Logger] Command = 20.0014
+19.077 [ Info   ][Logger] Motor executes updateHook !
+19.077 [ Info   ][Logger] pos = 19.9954
+20.078 [ Info   ][Logger] Controller executes updateHook !
+20.078 [ Info   ][Logger] Command = 19.9982
+20.078 [ Info   ][Logger] Motor executes updateHook !
+20.079 [ Info   ][Logger] pos = 20.0014
+21.077 [ Info   ][Logger] Controller executes updateHook !
+21.077 [ Info   ][Logger] Command = 20.0006
+21.077 [ Info   ][Logger] Motor executes updateHook !
+21.077 [ Info   ][Logger] pos = 19.9982
+22.078 [ Info   ][Logger] Controller executes updateHook !
+22.078 [ Info   ][Logger] Command = 19.9993
+22.078 [ Info   ][Logger] Motor executes updateHook !
+22.078 [ Info   ][Logger] pos = 20.0006
+22.499 [ Info   ][Logger] Ignoring deployment shutdown function due to missing peer.
+22.499 [ Info   ][stopComponentsGroup] Stopping group 0
+22.499 [ Info   ][stopComponentsGroup] Motor executes stopping !
+22.499 [ Info   ][stopComponentsGroup] Stopped M1
+22.499 [ Info   ][stopComponentsGroup] Controller executes stopping !
+22.499 [ Info   ][stopComponentsGroup] Stopped C1
+22.499 [ Info   ][cleanupComponentsGroup] Cleaning up group 0
+22.499 [ Info   ][cleanupComponentsGroup] Motor cleaning up !
+22.499 [ Info   ][cleanupComponentsGroup] Cleaned up M1
+22.499 [ Info   ][cleanupComponentsGroup] Controller cleaning up !
+22.500 [ Info   ][cleanupComponentsGroup] Cleaned up C1
+22.500 [ Info   ][Logger] Unloading group 0
+22.500 [ Info   ][Logger] Disconnected and destroyed M1
+22.500 [ Info   ][Logger] Disconnected and destroyed C1
+22.500 [ Info   ][Logger] Kick-out of group 0 successful.
+22.501 [ Info   ][Logger] Orocos Logging Deactivated.

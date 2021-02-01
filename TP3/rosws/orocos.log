@@ -1,0 +1,138 @@
+0.000 [ Info   ][Logger] No ORO_LOGLEVEL environment variable set.
+0.000 [ Info   ][Logger]  OROCOS version '2.9.0' compiled with GCC 7.5.0. Running in GNU/Linux.
+0.000 [ Info   ][Logger] Orocos Logging Activated at level : [ Warning] ( 4 ) 
+0.000 [ Info   ][Logger] Reference System Time is : 9036097076059 ticks ( 9036.1 seconds ).
+0.000 [ Info   ][Logger] Logging is relative to this time.
+0.000 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos . Searching in: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos
+0.000 [ Info   ][Logger] plugin 'rtt' not loaded before.
+0.000 [ Info   ][Logger] Loading plugin libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/./plugins ...
+0.000 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
+0.001 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
+0.001 [ Info   ][Logger] typekit 'rtt' not loaded before.
+0.001 [ Info   ][Logger] Loading typekit libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/./types ...
+0.002 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
+0.002 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
+0.024 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for llong
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for ullong
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
+0.024 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
+0.024 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos . Searching in: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos
+0.024 [ Info   ][Logger] OCL factory set for real-time logging
+0.024 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Deployer'
+0.024 [ Info   ][Deployer] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 7713 ).
+0.025 [ Info   ][Logger] No site file was found. Importing 'ocl' by default.
+0.025 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl ...
+0.026 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-logging-gnulinux.so'
+0.027 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-common-gnulinux.so'
+0.029 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::logging::Log4cxxAppender'
+0.033 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-netcdf-gnulinux.so'
+0.033 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::NetcdfReporting'
+0.035 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-timer-gnulinux.so'
+0.038 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::HelloWorld'
+0.038 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-gnulinux.so'
+0.038 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/types ...
+0.040 [ Info   ][TypekitRepository::Import] Loading Typekit OCLTypekit.
+0.040 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'OCLTypekit' from 'ocl'
+0.040 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/plugins ...
+0.042 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'os' from 'os'
+0.043 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'print' from 'print'
+0.043 [ Info   ][Logger] Loading Service or Plugin scripting in TaskContext Deployer
+0.043 [ Info   ][Logger] Found complete interface of requested service 'scripting'
+0.043 [ Info   ][Logger] Running Script controller.ops ...
+0.043 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
+0.043 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 7714 ).
+0.045 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos/gnulinux/Controller ...
+0.045 [ ERROR  ][ComponentLoader::importInstalledPackage(package, path_list)] Failed to import components, types or plugins from package or directory 'Controller' found in:
+0.045 [ ERROR  ][ComponentLoader::importInstalledPackage(package, path_list)] /home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos/gnulinux/Controller
+0.045 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros ...
+0.045 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/types ...
+0.089 [ Info   ][TypekitRepository::Import] Loading Typekit ros-primitives.
+0.089 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'ros-primitives' from 'rtt-ros-primitives-typekit'
+0.089 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/plugins ...
+0.091 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'ros' from 'rtt_ros_service'
+0.091 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_rosnode ...
+0.091 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_rosnode/plugins ...
+0.099 [ Info   ][ComponentLoader::import(path_list)] Initializing ROS node in Orocos plugin...
+0.103 [ Info   ][ComponentLoader::import(path_list)] ROS node spinner started (0 thread).
+0.103 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rosnode' from 'rtt_rosnode'
+0.104 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_roscomm ...
+0.104 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_roscomm/plugins ...
+0.109 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rosservice_registry' from 'rtt_rosservice_registry'
+0.114 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'rosservice' from 'rtt_rosservice'
+0.117 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rostopic' from 'rtt_rostopic_service'
+0.118 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_std_msgs ...
+0.118 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_std_msgs/types ...
+0.309 [ Info   ][TypekitRepository::Import] Loading Typekit ros-std_msgs.
+0.310 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'ros-std_msgs' from 'rtt-std_msgs-typekit'
+0.353 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-std_msgs.
+0.353 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Bool
+0.353 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Byte
+0.353 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/ByteMultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Char
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/ColorRGBA
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Duration
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Empty
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float32
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float32MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float64
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float64MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Header
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int16
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int16MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int32
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int32MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int64
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int64MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int8
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int8MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/MultiArrayDimension
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/MultiArrayLayout
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/String
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Time
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt16
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt16MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt32
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt32MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt64
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt64MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt8
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt8MultiArray
+0.354 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'rtt-ros-std_msgs-transport' from 'rtt-std_msgs-ros-transport'
+0.354 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_std_msgs/plugins ...
+0.371 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-primitives.
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for array
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for bool
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for duration
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for float32
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for float64
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for int16
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for int32
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for int64
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for int8
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for rt_string
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for string
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for time
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for uint16
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for uint32
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for uint64
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for uint8
+0.371 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rtt-ros-primitives-transport' from 'rtt-ros-primitives-transport'
+0.372 [ ERROR  ][loadComponent] Unable to create Orocos Component 'Control::Controller': unknown component type.
+0.372 [ ERROR  ][loadComponent] Unable to create Orocos Component 'Control::Motor': unknown component type.
+0.372 [ ERROR  ][ScriptingService] controller.ops :Parse error at line 13: Service or Task "Deployer" has no Peer or Service C1 (or Deployer was not found at all).
+0.372 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='TaskBrowser'
+0.373 [ Info   ][TaskBrowser] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 7724 ).
+0.373 [ Info   ][Logger] Entering Task Deployer
+8.216 [ Info   ][Logger] Ignoring deployment shutdown function due to missing peer.
+8.216 [ Info   ][stopComponentsGroup] Stopping group 0
+8.216 [ Info   ][cleanupComponentsGroup] Cleaning up group 0
+8.216 [ Info   ][Logger] Unloading group 0
+8.216 [ Info   ][Logger] Kick-out of group 0 successful.
+8.218 [ Info   ][Logger] Orocos Logging Deactivated.

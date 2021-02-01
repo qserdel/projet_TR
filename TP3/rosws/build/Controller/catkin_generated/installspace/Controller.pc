@@ -1,0 +1,8 @@
+prefix=/home/polytech/Bureau/projet_TR/TP3/rosws/install
+
+Name: Controller
+Description: Description of Controller
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,83 @@
+# Install script for directory: /home/polytech/Bureau/projet_TR/TP3/rosws/src/Controller/src
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "/home/polytech/Bureau/projet_TR/TP3/rosws/install")
+endif()
+string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
+
+# Set the install configuration name.
+if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+  if(BUILD_TYPE)
+    string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
+           CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
+  else()
+    set(CMAKE_INSTALL_CONFIG_NAME "")
+  endif()
+  message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
+endif()
+
+# Set the component getting installed.
+if(NOT CMAKE_INSTALL_COMPONENT)
+  if(COMPONENT)
+    message(STATUS "Install component: \"${COMPONENT}\"")
+    set(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
+  else()
+    set(CMAKE_INSTALL_COMPONENT)
+  endif()
+endif()
+
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+endif()
+
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libController-gnulinux.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libController-gnulinux.so")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libController-gnulinux.so"
+         RPATH "/home/polytech/ws/underlay/devel/lib:/home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/plugins:/home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/types:/home/polytech/ws/underlay_isolated/install_isolated/lib:/opt/ros/melodic/lib:/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux:/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/plugins:/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/types:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib/orocos/gnulinux/Controller:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib/orocos/gnulinux/Controller/types:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib/orocos/gnulinux/Controller/plugins:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller" TYPE SHARED_LIBRARY FILES "/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos/gnulinux/Controller/libController-gnulinux.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libController-gnulinux.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libController-gnulinux.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libController-gnulinux.so"
+         OLD_RPATH "/home/polytech/ws/underlay_isolated/install_isolated/lib:/home/polytech/ws/underlay/devel/lib:/home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/plugins:/home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/types:/opt/ros/melodic/lib::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+         NEW_RPATH "/home/polytech/ws/underlay/devel/lib:/home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/plugins:/home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/types:/home/polytech/ws/underlay_isolated/install_isolated/lib:/opt/ros/melodic/lib:/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux:/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/plugins:/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/types:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib/orocos/gnulinux/Controller:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib/orocos/gnulinux/Controller/types:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib/orocos/gnulinux/Controller/plugins:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libController-gnulinux.so")
+    endif()
+  endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libMotor-gnulinux.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libMotor-gnulinux.so")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libMotor-gnulinux.so"
+         RPATH "/home/polytech/ws/underlay/devel/lib:/home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/plugins:/home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/types:/home/polytech/ws/underlay_isolated/install_isolated/lib:/opt/ros/melodic/lib:/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux:/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/plugins:/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/types:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib/orocos/gnulinux/Controller:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib/orocos/gnulinux/Controller/types:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib/orocos/gnulinux/Controller/plugins:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller" TYPE SHARED_LIBRARY FILES "/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos/gnulinux/Controller/libMotor-gnulinux.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libMotor-gnulinux.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libMotor-gnulinux.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libMotor-gnulinux.so"
+         OLD_RPATH "/home/polytech/ws/underlay_isolated/install_isolated/lib:/home/polytech/ws/underlay/devel/lib:/home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/plugins:/home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/types:/opt/ros/melodic/lib::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
+         NEW_RPATH "/home/polytech/ws/underlay/devel/lib:/home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/plugins:/home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/types:/home/polytech/ws/underlay_isolated/install_isolated/lib:/opt/ros/melodic/lib:/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux:/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/plugins:/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/types:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib/orocos/gnulinux/Controller:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib/orocos/gnulinux/Controller/types:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib/orocos/gnulinux/Controller/plugins:/home/polytech/Bureau/projet_TR/TP3/rosws/install/lib")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/orocos/gnulinux/Controller/libMotor-gnulinux.so")
+    endif()
+  endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/orocos/Controller" TYPE FILE FILES "/home/polytech/Bureau/projet_TR/TP3/rosws/src/Controller/src/Controller-component.hpp")
+endif()
+

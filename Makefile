@@ -1,7 +1,7 @@
 obj-m:=driver_interruption.o
 KDIR := /lib/modules/$(shell uname -r)/build
 
-all: drivers mcc zeone
+all: drivers mcc pwm camOpen 
 
 drivers:
 	$(MAKE) -C $(KDIR) M=$(shell pwd) modules
@@ -21,7 +21,7 @@ i2c: ir.cpp ir.hpp
 mcc: mcc.cpp mcc.hpp
 	g++ -o mcc mcc.cpp -lwiringPi 
 
-zeone: Zeone.cpp mcc.hpp camopen.hpp ir.hpp pwm.hpp
+zeone: Zeone.cpp mcc.hpp camOpen.hpp ir.hpp pwm.hpp
 	g++ -o Zeone Zeone.cpp -lwiringPi -lpthread `pkg-config --cflags opencv` `pkg-config --libs opencv`
 
 clean:

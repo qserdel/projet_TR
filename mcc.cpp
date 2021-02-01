@@ -1,81 +1,39 @@
 #include "mcc.hpp"
 
-void* scan(void *arg)
+using namespace std;
+void scan(char choice)
 {
-    printf("1\n");
-    int fd = wiringPiI2CSetup (GROVE_MOTOR_DRIVER_DEFAULT_I2C_ADDR);
-    int* fd2 = (int*) arg;
-    int i = 0;
 
-    char buf2[20];
-    double angle, offset;
-    double resolution = (double)360/420;
-    long compteur;
-    char init[10];
- 
-    read(*fd2, buf2, 20);
-    compteur = atoi(buf2);
-    offset = compteur;
-    
-    
-    while(1)
-    {
-        wiringPiI2CWriteReg16(fd,GROVE_MOTOR_DRIVER_I2C_CMD_CW, 0xFF00);
-        read(*fd2, buf2, 20);
+    int fd;
 
-        compteur = atoi(buf2);
-        angle = (compteur - offset) * resolution;
-        printf("angle = %lf\n offset = %lf\n", angle, offset);
+    fd = wiringPiI2CSetup(GROVE_MOTOR_DRIVER_DEFAULT_I2C_ADDR);
+    int speed = 50; // Entre 0 et 255
+    int pin_ = 0;
+    int cmd = (speed << 8) | (pin_ & 0xFF);
 
-        sleep(1);
-        wiringPiI2CWriteReg16(fd,GROVE_MOTOR_DRIVER_I2C_CMD_STOP, 0x0000);
-        sleep(1);
-        wiringPiI2CWriteReg16(fd,GROVE_MOTOR_DRIVER_I2C_CMD_CCW, 0xFF00);
-        sleep(1);
-        wiringPiI2CWriteReg16(fd,GROVE_MOTOR_DRIVER_I2C_CMD_STOP, 0x0000);
-        sleep(1);
+
+    switch(choice){
+    case 'r':
+        wiringPiI2CWriteReg16(fd, CMD_CW, 0x4400);
+        break;
+    case 'l':
+        wiringPiI2CWriteReg16(fd, CMD_CCW, 0x4400);
+        break;
+    case 'b':
+        wiringPiI2CWriteReg16(fd, CMD_BRAKE, 0x00);
+        break;
+    case 's':
+        wiringPiI2CWriteReg16(fd, CMD_STOP, 0x00);
+        break;
     }
 
-    return 0;
 }
 
-/*
-while(1)
-    {
-        
-        if (i < 30)
-        {
-            
-            while (i < 30)
-            {
-                wiringPiI2CWriteReg16(fd,GROVE_MOTOR_DRIVER_I2C_CMD_STEPPER_KEEP_RUN, 0xFF00);
-                read(*fd2, buf2, 20);
-                compteur = atoi(buf2);
-                angle = (compteur - offset) * resolution;
-                printf("1/ angle = %lf\n i = %d\n", angle, i);
-                sleep(1);
-                i++;
-            }
-            wiringPiI2CWriteReg16(fd,GROVE_MOTOR_DRIVER_I2C_CMD_STOP, 0x0000);
-            sleep(1);
-        }
-
-        else if (i < 60) 
-        {
-            wiringPiI2CWriteReg16(fd,GROVE_MOTOR_DRIVER_I2C_CMD_CCW, 0xA000);
-            read(*fd2, buf2, 20);
-            compteur = atoi(buf2);
-            angle = (compteur - offset) * resolution;
-            printf("2/ angle = %lf\n i = %d\n", angle, i);
-            sleep(1);
-            i++;
-        }
-        
-        else
-        {
-            wiringPiI2CWriteReg16(fd,GROVE_MOTOR_DRIVER_I2C_CMD_STOP, 0x0000);
-            sleep(1);
-        }
-        
+int main(int argc, char* argv[])
+{
+    for (int i=0; i<10; i++){
+        scan(*argv[1]);
+        sleep(10);
     }
-*/
+    scan('s');
+}

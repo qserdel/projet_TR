@@ -95,3 +95,5 @@ Nous avons tout de même implémenté un contrôleur PID (inutile dans ce cas), 
 Pour que les sorties de nos deux composants soient lisibles dans ROS, nous avons modifié les types du contenu de
 leurs ports en std_msgs::Float64, puis nous avons fait en sorte que les valeurs "mesure" et "commande" soient publiées
 respectivement dans les topics "/controller_command" et "/controller_mesure"
+Lorsque l'on exécute la commande "rostopic echo /controller_command" quand le deployer est en
+train d'executer notre script ops, on récupère bien les valeurs de la commande du controleur.

@@ -1,618 +1,138 @@
 0.000 [ Info   ][Logger] No ORO_LOGLEVEL environment variable set.
 0.000 [ Info   ][Logger]  OROCOS version '2.9.0' compiled with GCC 7.5.0. Running in GNU/Linux.
 0.000 [ Info   ][Logger] Orocos Logging Activated at level : [ Warning] ( 4 ) 
-0.000 [ Info   ][Logger] Reference System Time is : 6940935254719 ticks ( 6940.94 seconds ).
+0.000 [ Info   ][Logger] Reference System Time is : 9036097076059 ticks ( 9036.1 seconds ).
 0.000 [ Info   ][Logger] Logging is relative to this time.
 0.000 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos . Searching in: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos
 0.000 [ Info   ][Logger] plugin 'rtt' not loaded before.
 0.000 [ Info   ][Logger] Loading plugin libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/./plugins ...
-0.001 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
+0.000 [ Info   ][Logger] Loaded RTT Service 'scripting' from 'rtt-scripting'
 0.001 [ Info   ][Logger] Loaded RTT Service 'marshalling' from 'rtt-marshalling'
 0.001 [ Info   ][Logger] typekit 'rtt' not loaded before.
 0.001 [ Info   ][Logger] Loading typekit libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/./types ...
-0.003 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
-0.003 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
-0.033 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
-0.034 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
-0.034 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
-0.034 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for llong
-0.034 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for ullong
-0.034 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
-0.034 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
-0.034 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
-0.034 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
-0.034 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
-0.034 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
-0.034 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos . Searching in: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos
-0.034 [ Info   ][Logger] OCL factory set for real-time logging
-0.034 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Deployer'
-0.034 [ Info   ][Deployer] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 6653 ).
-0.035 [ Info   ][Logger] No site file was found. Importing 'ocl' by default.
-0.035 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl ...
-0.037 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-logging-gnulinux.so'
-0.039 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-common-gnulinux.so'
-0.044 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::logging::Log4cxxAppender'
-0.049 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-netcdf-gnulinux.so'
-0.049 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::NetcdfReporting'
-0.051 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-timer-gnulinux.so'
-0.054 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::HelloWorld'
-0.055 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-gnulinux.so'
-0.055 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/types ...
-0.058 [ Info   ][TypekitRepository::Import] Loading Typekit OCLTypekit.
-0.059 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'OCLTypekit' from 'ocl'
-0.059 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/plugins ...
-0.061 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'os' from 'os'
-0.061 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'print' from 'print'
-0.061 [ Info   ][Logger] Loading Service or Plugin scripting in TaskContext Deployer
-0.062 [ Info   ][Logger] Found complete interface of requested service 'scripting'
-0.062 [ Info   ][Logger] Running Script controller.ops ...
-0.062 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
-0.062 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 6654 ).
-0.064 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos/gnulinux/Controller ...
-0.068 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos/gnulinux/Controller/libController-gnulinux.so'
-0.076 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos/gnulinux/Controller/libMotor-gnulinux.so'
-0.077 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros ...
-0.077 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/types ...
-0.134 [ Info   ][TypekitRepository::Import] Loading Typekit ros-primitives.
-0.135 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'ros-primitives' from 'rtt-ros-primitives-typekit'
-0.135 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/plugins ...
-0.138 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'ros' from 'rtt_ros_service'
-0.139 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_rosnode ...
-0.139 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_rosnode/plugins ...
-0.150 [ Info   ][ComponentLoader::import(path_list)] Initializing ROS node in Orocos plugin...
-0.156 [ Info   ][ComponentLoader::import(path_list)] ROS node spinner started (0 thread).
-0.156 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rosnode' from 'rtt_rosnode'
-0.157 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_roscomm ...
-0.157 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_roscomm/plugins ...
-0.164 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rosservice_registry' from 'rtt_rosservice_registry'
-0.172 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'rosservice' from 'rtt_rosservice'
-0.177 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rostopic' from 'rtt_rostopic_service'
-0.177 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_std_msgs ...
-0.177 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_std_msgs/types ...
-0.481 [ Info   ][TypekitRepository::Import] Loading Typekit ros-std_msgs.
-0.483 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'ros-std_msgs' from 'rtt-std_msgs-typekit'
-0.552 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-std_msgs.
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Bool
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Byte
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/ByteMultiArray
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Char
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/ColorRGBA
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Duration
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Empty
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float32
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float32MultiArray
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float64
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float64MultiArray
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Header
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int16
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int16MultiArray
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int32
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int32MultiArray
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int64
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int64MultiArray
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int8
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int8MultiArray
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/MultiArrayDimension
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/MultiArrayLayout
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/String
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Time
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt16
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt16MultiArray
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt32
-0.552 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt32MultiArray
-0.553 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt64
-0.553 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt64MultiArray
-0.553 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt8
-0.553 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt8MultiArray
-0.553 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'rtt-ros-std_msgs-transport' from 'rtt-std_msgs-ros-transport'
-0.553 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_std_msgs/plugins ...
-0.575 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-primitives.
-0.575 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for array
-0.575 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for bool
-0.575 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for duration
-0.575 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for float32
-0.575 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for float64
-0.575 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for int16
-0.575 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for int32
-0.575 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for int64
-0.575 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for int8
-0.575 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for rt_string
-0.576 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for string
-0.576 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for time
-0.576 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for uint16
-0.576 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for uint32
-0.576 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for uint64
-0.576 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for uint8
-0.576 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rtt-ros-primitives-transport' from 'rtt-ros-primitives-transport'
-0.576 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='C1'
-0.576 [ Info   ][C1] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 6664 ).
-0.576 [ Info   ][loadComponent] Controller constructed !
-0.577 [ Info   ][loadComponent] Adding C1 as new peer:  OK.
-0.577 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='M1'
-0.577 [ Info   ][M1] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 6665 ).
-0.577 [ Info   ][loadComponent] Motor constructed !
-0.577 [ Info   ][loadComponent] Adding M1 as new peer:  OK.
-0.578 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=0, CPU affinity=4294967295, with name='C1'
-0.579 [ Info   ][C1] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 1 (PID= 6666 ).
-0.580 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=0, CPU affinity=4294967295, with name='M1'
-0.580 [ Info   ][M1] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 1 (PID= 6667 ).
-0.581 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='RosPublishActivity'
-0.582 [ Info   ][RosPublishActivity] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 6668 ).
-0.582 [ Info   ][ScriptingService] Created output stream for output port cmd
-0.583 [ Info   ][ScriptingService] Created output stream for output port out
-0.584 [ Info   ][connect] Connected Port C1.cmd to  M1.in.
-0.584 [ Info   ][connect] Connected Port M1.out to  C1.mesure.
-0.585 [ Info   ][connect] Connected Port C1.cmd to  M1.event.
-0.585 [ Info   ][connect] Connected Port M1.out to  C1.event.
-0.586 [ Info   ][ScriptingService] Motor configured !
-0.586 [ Info   ][ScriptingService] Motor started !
-0.587 [ Info   ][ScriptingService] Controller configured !
-0.587 [ Info   ][ScriptingService] Controller started !
-0.587 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='TaskBrowser'
-0.588 [ Info   ][TaskBrowser] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 6669 ).
-0.588 [ Info   ][Logger] Entering Task Deployer
-1.591 [ Info   ][Logger] Controller executes updateHook !
-1.591 [ Info   ][Logger] Motor executes updateHook !
-1.591 [ Info   ][Logger] pos = 0
-1.592 [ Info   ][Logger] Command = 16
-2.581 [ Info   ][Logger] Controller executes updateHook !
-2.581 [ Info   ][Logger] Motor executes updateHook !
-2.581 [ Info   ][Logger] Command = 24
-2.581 [ Info   ][Logger] pos = 16
-3.580 [ Info   ][Logger] Controller executes updateHook !
-3.580 [ Info   ][Logger] Command = 21.2
-3.581 [ Info   ][Logger] Motor executes updateHook !
-3.581 [ Info   ][Logger] pos = 24
-4.581 [ Info   ][Logger] Controller executes updateHook !
-4.581 [ Info   ][Logger] Command = 18.4
-4.582 [ Info   ][Logger] Motor executes updateHook !
-4.582 [ Info   ][Logger] pos = 21.2
-5.580 [ Info   ][Logger] Controller executes updateHook !
-5.580 [ Info   ][Logger] Command = 19.44
-5.582 [ Info   ][Logger] Motor executes updateHook !
-5.582 [ Info   ][Logger] pos = 18.4
-6.584 [ Info   ][Logger] Motor executes updateHook !
-6.585 [ Info   ][Logger] pos = 19.44
-6.586 [ Info   ][Logger] Controller executes updateHook !
-6.586 [ Info   ][Logger] Command = 20.8
-7.581 [ Info   ][Logger] Controller executes updateHook !
-7.581 [ Info   ][Logger] Command = 20.488
-7.581 [ Info   ][Logger] Motor executes updateHook !
-7.581 [ Info   ][Logger] pos = 20.8
-8.581 [ Info   ][Logger] Controller executes updateHook !
-8.581 [ Info   ][Logger] Command = 19.784Motor executes updateHook !
-8.581 [ Info   ][Logger] pos = 20.488
-8.581 [ Info   ][Logger] 
-9.580 [ Info   ][Logger] Controller executes updateHook !
-9.580 [ Info   ][Logger] Command = 19.7696
-9.581 [ Info   ][Logger] Motor executes updateHook !
-9.581 [ Info   ][Logger] pos = 19.784
-10.581 [ Info   ][Logger] Controller executes updateHook !
-10.581 [ Info   ][Logger] Command = 20.0576
-10.581 [ Info   ][Logger] Motor executes updateHook !
-10.581 [ Info   ][Logger] pos = 19.7696
-11.580 [ Info   ][Logger] Controller executes updateHook !
-11.580 [ Info   ][Logger] Command = 20.1067
-11.581 [ Info   ][Logger] Motor executes updateHook !
-11.581 [ Info   ][Logger] pos = 20.0576
-12.580 [ Info   ][Logger] Controller executes updateHook !
-12.581 [ Info   ][Logger] Command = 19.9901
-12.581 [ Info   ][Logger] Motor executes updateHook !
-12.581 [ Info   ][Logger] pos = 20.1067
-13.580 [ Info   ][Logger] Controller executes updateHook !
-13.581 [ Info   ][Logger] Command = 19.9508
-13.581 [ Info   ][Logger] Motor executes updateHook !
-13.582 [ Info   ][Logger] pos = 19.9901
-14.580 [ Info   ][Logger] Controller executes updateHook !
-14.580 [ Info   ][Logger] Command = 19.9956
-14.581 [ Info   ][Logger] Motor executes updateHook !
-14.581 [ Info   ][Logger] pos = 19.9508
-15.581 [ Info   ][Logger] Controller executes updateHook !
-15.581 [ Info   ][Logger] Command = 20.0204
-15.581 [ Info   ][Logger] Motor executes updateHook !
-15.581 [ Info   ][Logger] pos = 19.9956
-16.581 [ Info   ][Logger] Controller executes updateHook !
-16.581 [ Info   ][Logger] Command = 20.0052
-16.582 [ Info   ][Logger] Motor executes updateHook !
-16.582 [ Info   ][Logger] pos = 20.0204
-17.581 [ Info   ][Logger] Controller executes updateHook !
-17.581 [ Info   ][Logger] Command = 19.992
-17.581 [ Info   ][Logger] Motor executes updateHook !
-17.582 [ Info   ][Logger] pos = 20.0052
-18.580 [ Info   ][Logger] Controller executes updateHook !
-18.580 [ Info   ][Logger] Command = 19.9965
-18.581 [ Info   ][Logger] Motor executes updateHook !
-18.581 [ Info   ][Logger] pos = 19.992
-19.580 [ Info   ][Logger] Controller executes updateHook !
-19.580 [ Info   ][Logger] Command = 20.0029
-19.582 [ Info   ][Logger] Motor executes updateHook !
-19.582 [ Info   ][Logger] pos = 19.9965
-20.580 [ Info   ][Logger] Controller executes updateHook !
-20.581 [ Info   ][Logger] Command = 20.002
-20.581 [ Info   ][Logger] Motor executes updateHook !
-20.581 [ Info   ][Logger] pos = 20.0029
-21.588 [ Info   ][Logger] Motor executes updateHook !
-21.589 [ Info   ][Logger] pos = 20.002
-21.589 [ Info   ][Logger] Controller executes updateHook !
-21.589 [ Info   ][Logger] Command = 19.9991
-22.581 [ Info   ][Logger] Controller executes updateHook !
-22.581 [ Info   ][Logger] Command = 19.999
-22.581 [ Info   ][Logger] Motor executes updateHook !
-22.581 [ Info   ][Logger] pos = 19.9991
-23.580 [ Info   ][Logger] Controller executes updateHook !
-23.580 [ Info   ][Logger] Command = 20.0002
-23.582 [ Info   ][Logger] Motor executes updateHook !
-23.583 [ Info   ][Logger] pos = 19.999
-24.580 [ Info   ][Logger] Controller executes updateHook !
-24.580 [ Info   ][Logger] Command = 20.0005
-24.581 [ Info   ][Logger] Motor executes updateHook !
-24.581 [ Info   ][Logger] pos = 20.0002
-25.580 [ Info   ][Logger] Controller executes updateHook !
-25.580 [ Info   ][Logger] Command = 20
-25.581 [ Info   ][Logger] Motor executes updateHook !
-25.581 [ Info   ][Logger] pos = 20.0005
-26.580 [ Info   ][Logger] Controller executes updateHook !
-26.580 [ Info   ][Logger] Command = 19.9998
-26.582 [ Info   ][Logger] Motor executes updateHook !
-26.582 [ Info   ][Logger] pos = 20
-27.581 [ Info   ][Logger] Controller executes updateHook !
-27.581 [ Info   ][Logger] Command = 20
-27.581 [ Info   ][Logger] Motor executes updateHook !
-27.581 [ Info   ][Logger] pos = 19.9998
-28.581 [ Info   ][Logger] Controller executes updateHook !
-28.581 [ Info   ][Logger] Motor executes updateHook !
-28.581 [ Info   ][Logger] Command = 20.0001
-28.581 [ Info   ][Logger] pos = 20
-29.581 [ Info   ][Logger] Controller executes updateHook !
-29.581 [ Info   ][Logger] Command = 20
-29.581 [ Info   ][Logger] Motor executes updateHook !
-29.581 [ Info   ][Logger] pos = 20.0001
-30.587 [ Info   ][Logger] Motor executes updateHook !
-30.587 [ Info   ][Logger] pos = 20
-30.588 [ Info   ][Logger] Controller executes updateHook !
-30.588 [ Info   ][Logger] Command = 20
-31.581 [ Info   ][Logger] Controller executes updateHook !
-31.582 [ Info   ][Logger] Command = 20
-31.582 [ Info   ][Logger] Motor executes updateHook !
-31.583 [ Info   ][Logger] pos = 20
-32.580 [ Info   ][Logger] Controller executes updateHook !
-32.580 [ Info   ][Logger] Command = 20
-32.581 [ Info   ][Logger] Motor executes updateHook !
-32.582 [ Info   ][Logger] pos = 20
-33.580 [ Info   ][Logger] Controller executes updateHook !
-33.580 [ Info   ][Logger] Command = 20
-33.582 [ Info   ][Logger] Motor executes updateHook !
-33.582 [ Info   ][Logger] pos = 20
-34.580 [ Info   ][Logger] Controller executes updateHook !
-34.580 [ Info   ][Logger] Command = 20
-34.581 [ Info   ][Logger] Motor executes updateHook !
-34.581 [ Info   ][Logger] pos = 20
-35.581 [ Info   ][Logger] Controller executes updateHook !
-35.581 [ Info   ][Logger] Command = 20
-35.581 [ Info   ][Logger] Motor executes updateHook !
-35.582 [ Info   ][Logger] pos = 20
-36.581 [ Info   ][Logger] Controller executes updateHook !
-36.581 [ Info   ][Logger] Command = 20
-36.581 [ Info   ][Logger] Motor executes updateHook !
-36.581 [ Info   ][Logger] pos = 20
-37.580 [ Info   ][Logger] Controller executes updateHook !
-37.581 [ Info   ][Logger] Command = 20
-37.582 [ Info   ][Logger] Motor executes updateHook !
-37.582 [ Info   ][Logger] pos = 20
-38.580 [ Info   ][Logger] Controller executes updateHook !
-38.580 [ Info   ][Logger] Command = 20
-38.581 [ Info   ][Logger] Motor executes updateHook !
-38.581 [ Info   ][Logger] pos = 20
-39.582 [ Info   ][Logger] Controller executes updateHook !
-39.582 [ Info   ][Logger] Motor executes updateHook !
-39.583 [ Info   ][Logger] Command = 20
-39.583 [ Info   ][Logger] pos = 20
-40.580 [ Info   ][Logger] Controller executes updateHook !
-40.580 [ Info   ][Logger] Command = 20
-40.581 [ Info   ][Logger] Motor executes updateHook !
-40.581 [ Info   ][Logger] pos = 20
-41.580 [ Info   ][Logger] Controller executes updateHook !
-41.581 [ Info   ][Logger] Command = 20
-41.581 [ Info   ][Logger] Motor executes updateHook !
-41.581 [ Info   ][Logger] pos = 20
-42.580 [ Info   ][Logger] Controller executes updateHook !
-42.580 [ Info   ][Logger] Command = 20
-42.581 [ Info   ][Logger] Motor executes updateHook !
-42.582 [ Info   ][Logger] pos = 20
-43.580 [ Info   ][Logger] Controller executes updateHook !
-43.581 [ Info   ][Logger] Command = 20
-43.581 [ Info   ][Logger] Motor executes updateHook !
-43.582 [ Info   ][Logger] pos = 20
-44.581 [ Info   ][Logger] Controller executes updateHook !
-44.581 [ Info   ][Logger] Command = 20
-44.581 [ Info   ][Logger] Motor executes updateHook !
-44.581 [ Info   ][Logger] pos = 20
-45.580 [ Info   ][Logger] Controller executes updateHook !
-45.580 [ Info   ][Logger] Command = 20
-45.582 [ Info   ][Logger] Motor executes updateHook !
-45.582 [ Info   ][Logger] pos = 20
-46.582 [ Info   ][Logger] Controller executes updateHook !
-46.582 [ Info   ][Logger] Command = 20
-46.582 [ Info   ][Logger] Motor executes updateHook !
-46.582 [ Info   ][Logger] pos = 20
-47.581 [ Info   ][Logger] Controller executes updateHook !
-47.581 [ Info   ][Logger] Command = 20
-47.582 [ Info   ][Logger] Motor executes updateHook !
-47.582 [ Info   ][Logger] pos = 20
-48.583 [ Info   ][Logger] Motor executes updateHook !
-48.583 [ Info   ][Logger] Controller executes updateHook !pos = 
-48.583 [ Info   ][Logger] 20
-48.583 [ Info   ][Logger] Command = 20
-49.581 [ Info   ][Logger] Controller executes updateHook !
-49.581 [ Info   ][Logger] Motor executes updateHook !
-49.582 [ Info   ][Logger] Command = 20
-49.582 [ Info   ][Logger] pos = 20
-50.581 [ Info   ][Logger] Controller executes updateHook !
-50.581 [ Info   ][Logger] Command = 20
-50.581 [ Info   ][Logger] Motor executes updateHook !
-50.581 [ Info   ][Logger] pos = 20
-51.580 [ Info   ][Logger] Controller executes updateHook !
-51.581 [ Info   ][Logger] Command = 20
-51.581 [ Info   ][Logger] Motor executes updateHook !
-51.581 [ Info   ][Logger] pos = 20
-52.580 [ Info   ][Logger] Controller executes updateHook !
-52.581 [ Info   ][Logger] Command = 20
-52.582 [ Info   ][Logger] Motor executes updateHook !
-52.582 [ Info   ][Logger] pos = 20
-53.580 [ Info   ][Logger] Controller executes updateHook !
-53.580 [ Info   ][Logger] Command = 20
-53.582 [ Info   ][Logger] Motor executes updateHook !
-53.582 [ Info   ][Logger] pos = 20
-54.580 [ Info   ][Logger] Controller executes updateHook !
-54.580 [ Info   ][Logger] Command = 20
-54.582 [ Info   ][Logger] Motor executes updateHook !
-54.582 [ Info   ][Logger] pos = 20
-55.581 [ Info   ][Logger] Controller executes updateHook !
-55.581 [ Info   ][Logger] Command = 20
-55.581 [ Info   ][Logger] Motor executes updateHook !
-55.581 [ Info   ][Logger] pos = 20
-56.580 [ Info   ][Logger] Controller executes updateHook !
-56.580 [ Info   ][Logger] Command = 20
-56.581 [ Info   ][Logger] Motor executes updateHook !
-56.581 [ Info   ][Logger] pos = 20
-57.582 [ Info   ][Logger] Controller executes updateHook !
-57.582 [ Info   ][Logger] Command = 20
-57.583 [ Info   ][Logger] Motor executes updateHook !
-57.583 [ Info   ][Logger] pos = 20
-58.581 [ Info   ][Logger] Motor executes updateHook !
-58.581 [ Info   ][Logger] pos = 20
-58.581 [ Info   ][Logger] Controller executes updateHook !
-58.582 [ Info   ][Logger] Command = 20
-59.581 [ Info   ][Logger] Motor executes updateHook !
-59.581 [ Info   ][Logger] Controller executes updateHook !
-59.581 [ Info   ][Logger] Command = 20
-59.581 [ Info   ][Logger] pos = 20
-60.580 [ Info   ][Logger] Controller executes updateHook !
-60.580 [ Info   ][Logger] Command = 20
-60.581 [ Info   ][Logger] Motor executes updateHook !
-60.581 [ Info   ][Logger] pos = 20
-61.580 [ Info   ][Logger] Controller executes updateHook !
-61.580 [ Info   ][Logger] Command = 20
-61.582 [ Info   ][Logger] Motor executes updateHook !
-61.582 [ Info   ][Logger] pos = 20
-62.581 [ Info   ][Logger] Controller executes updateHook !
-62.581 [ Info   ][Logger] Command = 20
-62.581 [ Info   ][Logger] Motor executes updateHook !
-62.581 [ Info   ][Logger] pos = 20
-63.580 [ Info   ][Logger] Controller executes updateHook !
-63.580 [ Info   ][Logger] Command = 20
-63.581 [ Info   ][Logger] Motor executes updateHook !
-63.581 [ Info   ][Logger] pos = 20
-64.580 [ Info   ][Logger] Controller executes updateHook !
-64.580 [ Info   ][Logger] Command = 20
-64.581 [ Info   ][Logger] Motor executes updateHook !
-64.581 [ Info   ][Logger] pos = 20
-65.580 [ Info   ][Logger] Controller executes updateHook !
-65.580 [ Info   ][Logger] Command = 20
-65.582 [ Info   ][Logger] Motor executes updateHook !
-65.582 [ Info   ][Logger] pos = 20
-66.580 [ Info   ][Logger] Controller executes updateHook !
-66.580 [ Info   ][Logger] Command = 20
-66.582 [ Info   ][Logger] Motor executes updateHook !
-66.582 [ Info   ][Logger] pos = 20
-67.604 [ Info   ][Logger] Controller executes updateHook !
-67.604 [ Info   ][Logger] Command = 20
-67.604 [ Info   ][Logger] Motor executes updateHook !
-67.604 [ Info   ][Logger] pos = 20
-68.580 [ Info   ][Logger] Controller executes updateHook !
-68.581 [ Info   ][Logger] Command = 20
-68.582 [ Info   ][Logger] Motor executes updateHook !
-68.582 [ Info   ][Logger] pos = 20
-69.581 [ Info   ][Logger] Controller executes updateHook !
-69.581 [ Info   ][Logger] Command = 20
-69.581 [ Info   ][Logger] Motor executes updateHook !
-69.581 [ Info   ][Logger] pos = 20
-70.580 [ Info   ][Logger] Controller executes updateHook !
-70.580 [ Info   ][Logger] Command = 20
-70.581 [ Info   ][Logger] Motor executes updateHook !
-70.581 [ Info   ][Logger] pos = 20
-71.581 [ Info   ][Logger] Controller executes updateHook !
-71.581 [ Info   ][Logger] Command = 20
-71.581 [ Info   ][Logger] Motor executes updateHook !
-71.581 [ Info   ][Logger] pos = 20
-72.581 [ Info   ][Logger] Controller executes updateHook !
-72.581 [ Info   ][Logger] Command = 20
-72.581 [ Info   ][Logger] Motor executes updateHook !
-72.581 [ Info   ][Logger] pos = 20
-73.581 [ Info   ][Logger] Controller executes updateHook !
-73.581 [ Info   ][Logger] Motor executes updateHook !
-73.581 [ Info   ][Logger] Command = 20
-73.581 [ Info   ][Logger] pos = 20
-74.580 [ Info   ][Logger] Controller executes updateHook !
-74.580 [ Info   ][Logger] Command = 20
-74.582 [ Info   ][Logger] Motor executes updateHook !
-74.582 [ Info   ][Logger] pos = 20
-75.580 [ Info   ][Logger] Controller executes updateHook !
-75.581 [ Info   ][Logger] Command = 20
-75.581 [ Info   ][Logger] Motor executes updateHook !
-75.582 [ Info   ][Logger] pos = 20
-76.580 [ Info   ][Logger] Controller executes updateHook !
-76.580 [ Info   ][Logger] Command = 20
-76.581 [ Info   ][Logger] Motor executes updateHook !
-76.582 [ Info   ][Logger] pos = 20
-77.580 [ Info   ][Logger] Controller executes updateHook !
-77.580 [ Info   ][Logger] Command = 20
-77.583 [ Info   ][Logger] Motor executes updateHook !
-77.583 [ Info   ][Logger] pos = 20
-78.581 [ Info   ][Logger] Controller executes updateHook !
-78.581 [ Info   ][Logger] Command = 20
-78.581 [ Info   ][Logger] Motor executes updateHook !
-78.582 [ Info   ][Logger] pos = 20
-79.580 [ Info   ][Logger] Controller executes updateHook !
-79.580 [ Info   ][Logger] Command = 20
-79.582 [ Info   ][Logger] Motor executes updateHook !
-79.582 [ Info   ][Logger] pos = 20
-80.580 [ Info   ][Logger] Controller executes updateHook !
-80.580 [ Info   ][Logger] Command = 20
-80.583 [ Info   ][Logger] Motor executes updateHook !
-80.583 [ Info   ][Logger] pos = 20
-81.581 [ Info   ][Logger] Controller executes updateHook !
-81.581 [ Info   ][Logger] Command = 20
-81.582 [ Info   ][Logger] Motor executes updateHook !
-81.582 [ Info   ][Logger] pos = 20
-82.581 [ Info   ][Logger] Controller executes updateHook !
-82.581 [ Info   ][Logger] Command = 20
-82.584 [ Info   ][Logger] Motor executes updateHook !
-82.584 [ Info   ][Logger] pos = 20
-83.581 [ Info   ][Logger] Controller executes updateHook !
-83.581 [ Info   ][Logger] Command = 20
-83.581 [ Info   ][Logger] Motor executes updateHook !
-83.582 [ Info   ][Logger] pos = 20
-84.582 [ Info   ][Logger] Controller executes updateHook !
-84.582 [ Info   ][Logger] Command = 20
-84.583 [ Info   ][Logger] Motor executes updateHook !
-84.583 [ Info   ][Logger] pos = 20
-85.581 [ Info   ][Logger] Controller executes updateHook !
-85.581 [ Info   ][Logger] Motor executes updateHook !
-85.582 [ Info   ][Logger] pos = 20
-85.582 [ Info   ][Logger] Command = 20
-86.581 [ Info   ][Logger] Controller executes updateHook !
-86.581 [ Info   ][Logger] Command = 20
-86.581 [ Info   ][Logger] Motor executes updateHook !
-86.581 [ Info   ][Logger] pos = 20
-87.582 [ Info   ][Logger] Controller executes updateHook !
-87.582 [ Info   ][Logger] Command = 20
-87.583 [ Info   ][Logger] Motor executes updateHook !
-87.583 [ Info   ][Logger] pos = 20
-88.580 [ Info   ][Logger] Controller executes updateHook !
-88.580 [ Info   ][Logger] Command = 20
-88.581 [ Info   ][Logger] Motor executes updateHook !
-88.581 [ Info   ][Logger] pos = 20
-89.581 [ Info   ][Logger] Controller executes updateHook !
-89.581 [ Info   ][Logger] Command = 20
-89.581 [ Info   ][Logger] Motor executes updateHook !
-89.581 [ Info   ][Logger] pos = 20
-90.581 [ Info   ][Logger] Controller executes updateHook !
-90.581 [ Info   ][Logger] Command = 20
-90.581 [ Info   ][Logger] Motor executes updateHook !
-90.581 [ Info   ][Logger] pos = 20
-91.581 [ Info   ][Logger] Controller executes updateHook !
-91.581 [ Info   ][Logger] Command = 20
-91.581 [ Info   ][Logger] Motor executes updateHook !
-91.581 [ Info   ][Logger] pos = 20
-92.581 [ Info   ][Logger] Motor executes updateHook !
-92.581 [ Info   ][Logger] pos = 20
-92.581 [ Info   ][Logger] Controller executes updateHook !
-92.582 [ Info   ][Logger] Command = 20
-93.581 [ Info   ][Logger] Controller executes updateHook !
-93.582 [ Info   ][Logger] Command = 20
-93.582 [ Info   ][Logger] Motor executes updateHook !
-93.582 [ Info   ][Logger] pos = 20
-94.580 [ Info   ][Logger] Controller executes updateHook !
-94.581 [ Info   ][Logger] Command = 20
-94.581 [ Info   ][Logger] Motor executes updateHook !
-94.581 [ Info   ][Logger] pos = 20
-95.581 [ Info   ][Logger] Controller executes updateHook !
-95.581 [ Info   ][Logger] Command = 20
-95.581 [ Info   ][Logger] Motor executes updateHook !
-95.582 [ Info   ][Logger] pos = 20
-96.581 [ Info   ][Logger] Controller executes updateHook !
-96.581 [ Info   ][Logger] Motor executes updateHook !
-96.581 [ Info   ][Logger] Command = 20
-96.581 [ Info   ][Logger] pos = 20
-97.581 [ Info   ][Logger] Controller executes updateHook !
-97.581 [ Info   ][Logger] Command = 20
-97.581 [ Info   ][Logger] Motor executes updateHook !
-97.581 [ Info   ][Logger] pos = 20
-98.584 [ Info   ][Logger] Motor executes updateHook !
-98.584 [ Info   ][Logger] Controller executes updateHook !
-98.584 [ Info   ][Logger] Command = 20
-98.584 [ Info   ][Logger] pos = 20
-99.580 [ Info   ][Logger] Controller executes updateHook !
-99.580 [ Info   ][Logger] Command = 20
-99.581 [ Info   ][Logger] Motor executes updateHook !
-99.581 [ Info   ][Logger] pos = 20
-100.580 [ Info   ][Logger] Controller executes updateHook !
-100.580 [ Info   ][Logger] Command = 20
-100.581 [ Info   ][Logger] Motor executes updateHook !
-100.581 [ Info   ][Logger] pos = 20
-101.580 [ Info   ][Logger] Controller executes updateHook !
-101.580 [ Info   ][Logger] Command = 20
-101.581 [ Info   ][Logger] Motor executes updateHook !
-101.582 [ Info   ][Logger] pos = 20
-102.580 [ Info   ][Logger] Controller executes updateHook !
-102.580 [ Info   ][Logger] Command = 20
-102.582 [ Info   ][Logger] Motor executes updateHook !
-102.582 [ Info   ][Logger] pos = 20
-103.580 [ Info   ][Logger] Controller executes updateHook !
-103.581 [ Info   ][Logger] Command = 20
-103.581 [ Info   ][Logger] Motor executes updateHook !
-103.585 [ Info   ][Logger] pos = 20
-104.580 [ Info   ][Logger] Controller executes updateHook !
-104.580 [ Info   ][Logger] Command = 20
-104.582 [ Info   ][Logger] Motor executes updateHook !
-104.582 [ Info   ][Logger] pos = 20
-105.580 [ Info   ][Logger] Controller executes updateHook !
-105.580 [ Info   ][Logger] Command = 20
-105.582 [ Info   ][Logger] Motor executes updateHook !
-105.582 [ Info   ][Logger] pos = 20
-106.580 [ Info   ][Logger] Controller executes updateHook !
-106.580 [ Info   ][Logger] Command = 20
-106.582 [ Info   ][Logger] Motor executes updateHook !
-106.582 [ Info   ][Logger] pos = 20
-107.581 [ Info   ][Logger] Controller executes updateHook !
-107.581 [ Info   ][Logger] Motor executes updateHook !
-107.582 [ Info   ][Logger] pos = 20
-107.582 [ Info   ][Logger] Command = 20
-108.582 [ Info   ][Logger] Motor executes updateHook !
-108.586 [ Info   ][Logger] Controller executes updateHook !
-108.586 [ Info   ][Logger] pos = 20
-108.586 [ Info   ][Logger] Command = 20
-109.580 [ Info   ][Logger] Controller executes updateHook !
-109.580 [ Info   ][Logger] Command = 20
-109.581 [ Info   ][Logger] Motor executes updateHook !
-109.581 [ Info   ][Logger] pos = 20
-110.580 [ Info   ][Logger] Controller executes updateHook !
-110.580 [ Info   ][Logger] Command = 20
-110.582 [ Info   ][Logger] Motor executes updateHook !
-110.582 [ Info   ][Logger] pos = 20
-111.580 [ Info   ][Logger] Controller executes updateHook !
-111.580 [ Info   ][Logger] Command = 20
-111.581 [ Info   ][Logger] Motor executes updateHook !
-111.581 [ Info   ][Logger] pos = 20
-112.580 [ Info   ][Logger] Controller executes updateHook !
-112.580 [ Info   ][Logger] Command = 20
-112.581 [ Info   ][Logger] Motor executes updateHook !
-112.581 [ Info   ][Logger] pos = 20
-113.038 [ Info   ][Logger] Ignoring deployment shutdown function due to missing peer.
-113.038 [ Info   ][stopComponentsGroup] Stopping group 0
-113.038 [ Info   ][stopComponentsGroup] Motor executes stopping !
-113.038 [ Info   ][stopComponentsGroup] Stopped M1
-113.038 [ Info   ][stopComponentsGroup] Controller executes stopping !
-113.038 [ Info   ][stopComponentsGroup] Stopped C1
-113.038 [ Info   ][cleanupComponentsGroup] Cleaning up group 0
-113.038 [ Info   ][cleanupComponentsGroup] Motor cleaning up !
-113.038 [ Info   ][cleanupComponentsGroup] Cleaned up M1
-113.038 [ Info   ][cleanupComponentsGroup] Controller cleaning up !
-113.038 [ Info   ][cleanupComponentsGroup] Cleaned up C1
-113.038 [ Info   ][Logger] Unloading group 0
-113.040 [ Info   ][Logger] Disconnected and destroyed M1
-113.040 [ Info   ][RosPublishActivity] RosPublishActivity cleans up: no more work.
-113.041 [ Info   ][Logger] Disconnected and destroyed C1
-113.041 [ Info   ][Logger] Kick-out of group 0 successful.
-113.043 [ Info   ][Logger] Orocos Logging Deactivated.
+0.002 [ Info   ][TypekitRepository::Import] Loading Transport mqueue://rtt-types.
+0.002 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-mqueue-transport' from 'rtt-transport-mqueue'
+0.024 [ Info   ][TypekitRepository::Import] Loading Typekit rtt-types.
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for int
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for uint
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for llong
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for ullong
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for double
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for float
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for char
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for bool
+0.024 [ Info   ][TypekitRepository::Import] Registered new 'mqueue' transport for array
+0.024 [ Info   ][Logger] Loaded RTT TypeKit/Transport 'rtt-types' from 'rtt-typekit'
+0.024 [ Info   ][Logger] RTT_COMPONENT_PATH was set to: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos . Searching in: /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos:/home/polytech/ws/underlay/devel/lib/orocos:/home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos
+0.024 [ Info   ][Logger] OCL factory set for real-time logging
+0.024 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='Deployer'
+0.024 [ Info   ][Deployer] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 7713 ).
+0.025 [ Info   ][Logger] No site file was found. Importing 'ocl' by default.
+0.025 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl ...
+0.026 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-logging-gnulinux.so'
+0.027 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-common-gnulinux.so'
+0.029 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::logging::Log4cxxAppender'
+0.033 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-netcdf-gnulinux.so'
+0.033 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::NetcdfReporting'
+0.035 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-timer-gnulinux.so'
+0.038 [ Info   ][ComponentLoader::import(path_list)] Loaded component type 'OCL::HelloWorld'
+0.038 [ Info   ][ComponentLoader::import(path_list)] Loaded multi component library '/home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/liborocos-ocl-reporting-gnulinux.so'
+0.038 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/types ...
+0.040 [ Info   ][TypekitRepository::Import] Loading Typekit OCLTypekit.
+0.040 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'OCLTypekit' from 'ocl'
+0.040 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay_isolated/install_isolated/lib/orocos/gnulinux/ocl/plugins ...
+0.042 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'os' from 'os'
+0.043 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'print' from 'print'
+0.043 [ Info   ][Logger] Loading Service or Plugin scripting in TaskContext Deployer
+0.043 [ Info   ][Logger] Found complete interface of requested service 'scripting'
+0.043 [ Info   ][Logger] Running Script controller.ops ...
+0.043 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='GlobalEngine'
+0.043 [ Info   ][GlobalEngine] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 7714 ).
+0.045 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos/gnulinux/Controller ...
+0.045 [ ERROR  ][ComponentLoader::importInstalledPackage(package, path_list)] Failed to import components, types or plugins from package or directory 'Controller' found in:
+0.045 [ ERROR  ][ComponentLoader::importInstalledPackage(package, path_list)] /home/polytech/Bureau/projet_TR/TP3/rosws/devel/lib/orocos/gnulinux/Controller
+0.045 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros ...
+0.045 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/types ...
+0.089 [ Info   ][TypekitRepository::Import] Loading Typekit ros-primitives.
+0.089 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'ros-primitives' from 'rtt-ros-primitives-typekit'
+0.089 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_ros/plugins ...
+0.091 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'ros' from 'rtt_ros_service'
+0.091 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_rosnode ...
+0.091 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_rosnode/plugins ...
+0.099 [ Info   ][ComponentLoader::import(path_list)] Initializing ROS node in Orocos plugin...
+0.103 [ Info   ][ComponentLoader::import(path_list)] ROS node spinner started (0 thread).
+0.103 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rosnode' from 'rtt_rosnode'
+0.104 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_roscomm ...
+0.104 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_roscomm/plugins ...
+0.109 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rosservice_registry' from 'rtt_rosservice_registry'
+0.114 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Service 'rosservice' from 'rtt_rosservice'
+0.117 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rostopic' from 'rtt_rostopic_service'
+0.118 [ Info   ][ComponentLoader::import(path_list)] Importing directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_std_msgs ...
+0.118 [ Info   ][ComponentLoader::import(path_list)] Loading typekit libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_std_msgs/types ...
+0.309 [ Info   ][TypekitRepository::Import] Loading Typekit ros-std_msgs.
+0.310 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'ros-std_msgs' from 'rtt-std_msgs-typekit'
+0.353 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-std_msgs.
+0.353 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Bool
+0.353 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Byte
+0.353 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/ByteMultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Char
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/ColorRGBA
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Duration
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Empty
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float32
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float32MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float64
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Float64MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Header
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int16
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int16MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int32
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int32MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int64
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int64MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int8
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Int8MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/MultiArrayDimension
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/MultiArrayLayout
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/String
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/Time
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt16
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt16MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt32
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt32MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt64
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt64MultiArray
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt8
+0.354 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for /std_msgs/UInt8MultiArray
+0.354 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT TypeKit/Transport 'rtt-ros-std_msgs-transport' from 'rtt-std_msgs-ros-transport'
+0.354 [ Info   ][ComponentLoader::import(path_list)] Loading plugin libraries from directory /home/polytech/ws/underlay/devel/lib/orocos/gnulinux/rtt_std_msgs/plugins ...
+0.371 [ Info   ][TypekitRepository::Import] Loading Transport ros://ros-primitives.
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for array
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for bool
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for duration
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for float32
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for float64
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for int16
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for int32
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for int64
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for int8
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for rt_string
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for string
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for time
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for uint16
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for uint32
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for uint64
+0.371 [ Info   ][TypekitRepository::Import] Registered new 'ros' transport for uint8
+0.371 [ Info   ][ComponentLoader::import(path_list)] Loaded RTT Plugin 'rtt-ros-primitives-transport' from 'rtt-ros-primitives-transport'
+0.372 [ ERROR  ][loadComponent] Unable to create Orocos Component 'Control::Controller': unknown component type.
+0.372 [ ERROR  ][loadComponent] Unable to create Orocos Component 'Control::Motor': unknown component type.
+0.372 [ ERROR  ][ScriptingService] controller.ops :Parse error at line 13: Service or Task "Deployer" has no Peer or Service C1 (or Deployer was not found at all).
+0.372 [ Info   ][Thread] Creating Thread for scheduler=ORO_SCHED_OTHER, priority=1, CPU affinity=0, with name='TaskBrowser'
+0.373 [ Info   ][TaskBrowser] Thread created with scheduler type 'ORO_SCHED_OTHER', priority 0, cpu affinity 15 and period 0 (PID= 7724 ).
+0.373 [ Info   ][Logger] Entering Task Deployer
+8.216 [ Info   ][Logger] Ignoring deployment shutdown function due to missing peer.
+8.216 [ Info   ][stopComponentsGroup] Stopping group 0
+8.216 [ Info   ][cleanupComponentsGroup] Cleaning up group 0
+8.216 [ Info   ][Logger] Unloading group 0
+8.216 [ Info   ][Logger] Kick-out of group 0 successful.
+8.218 [ Info   ][Logger] Orocos Logging Deactivated.

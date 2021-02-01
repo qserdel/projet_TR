@@ -1,0 +1,1 @@
+cmd_/home/pi/Desktop/ProjetTR/projet_TR/TP2/module1.ko := ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/pi/Desktop/ProjetTR/projet_TR/TP2/module1.ko /home/pi/Desktop/ProjetTR/projet_TR/TP2/module1.o /home/pi/Desktop/ProjetTR/projet_TR/TP2/module1.mod.o;  true

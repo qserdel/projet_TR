@@ -1,3 +1,6 @@
+#ifndef IR_HPP
+#define IR_HPP
+
 #include <wiringPi.h>
 #include <wiringPiI2C.h>
 #include <iostream>
@@ -7,7 +10,7 @@ static int i2c_pin = 1;
 
 using namespace std;
 
-float getDistance(){
+void* getDistance(void *arg){
 
   int fd = wiringPiI2CSetup(0x04);
   if (wiringPiI2CWrite (fd, 0x30+i2c_pin) < 0)
@@ -16,15 +19,8 @@ float getDistance(){
   float voltage = value*3.3/1024;
   close(fd);
   float distance = (17*voltage*voltage -75*voltage + 90); //valable entre 5 et 80 cm
-  //cout<<voltage<<endl;
-  return distance;
+  cout<<distance<<endl;
+  return NULL;
 }
 
-int main()
-{
-  while(1){
-    cout<<getDistance()<<endl;
-    delay(20);
-  }
-  return 0;
-}
+#endif

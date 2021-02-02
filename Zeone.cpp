@@ -10,7 +10,7 @@ static unsigned int n_thread = 3;
 int main()
 {
     pthread_t id[n_thread+1];
-    pthread_create(&id[0], NULL, getDistance, NULL);
+    pthread_create(&id[0], NULL, getDistance(), NULL);
     pthread_create(&id[1], NULL, cam, NULL);
     pthread_create(&id[2], NULL, cam_motors, NULL);
 

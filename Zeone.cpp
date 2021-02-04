@@ -1,11 +1,12 @@
 #include "camOpen.hpp"
 #include "mcc.hpp"
-#include "ir.hpp"
 #include "pwm.hpp"
 #include <pthread.h>
 #include <semaphore.h>
 
 static unsigned int n_thread = 3;
+
+
 
 int main()
 {

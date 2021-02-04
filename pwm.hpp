@@ -10,7 +10,7 @@ static int pin_m2 = 25; //pin gpio26
 int cam_motors_setup(){
 	if(wiringPiSetup()==-1) // Setup the library
 		return -1;
-	softPwmCreate(pin_m1,0,180); //initialise  pin m1 en pwm
+	softPwmCreate(pin_m1,0,100); //initialise  pin m1 en pwm
 	softPwmCreate(pin_m2,0,90); //initialise pin m2 en pwm
   return 0;
 }
@@ -35,6 +35,11 @@ while(1)
   }
 }
 return 0;
+}
+
+void cam_motors2(int pos){
+	cam_motors_setup();
+	softPwmWrite(pin_m1, pos);
 }
 
 

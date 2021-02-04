@@ -1,5 +1,8 @@
 ceci est le repository git du projet ROB5 de temps réel
 
+pour monter le driver sudo insmod driver.ko
+l'enlever sudo rmmod driver.mod
+
 Tableau des pins wiringPi (BCM -> wPi) :
 
  +-----+-----+---------+------+---+---Pi 3B+-+---+------+---------+-----+-----+

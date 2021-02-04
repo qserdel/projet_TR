@@ -1,1 +1,0 @@
-cmd_/home/pi/Desktop/ProjetTR/projet_TR/driver_interruption.ko := ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/pi/Desktop/ProjetTR/projet_TR/driver_interruption.ko /home/pi/Desktop/ProjetTR/projet_TR/driver_interruption.o /home/pi/Desktop/ProjetTR/projet_TR/driver_interruption.mod.o;  true

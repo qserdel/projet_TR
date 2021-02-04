@@ -1,19 +1,18 @@
 #include "mcc.hpp"
 
 using namespace std;
-void scan(char choice)
+
+void* balayage(void* arg)
 {
-
     int fd;
-
     fd = wiringPiI2CSetup(GROVE_MOTOR_DRIVER_DEFAULT_I2C_ADDR);
     int speed = 100; // Entre 0 et 255
     int pin_ = 0x0FFF;
     int cmd = (speed << 8) | (pin_ & 0xFF00);
 
-
-    switch(choice){
-    case 'r':
+    while(1){
+    //switch(choice){
+    //case 'r':
         wiringPiI2CWriteReg16(fd, CMD_CW, cmd);
         sleep(1);
         wiringPiI2CWriteReg16(fd, CMD_CW, cmd);
@@ -21,8 +20,8 @@ void scan(char choice)
         wiringPiI2CWriteReg16(fd, CMD_CCW, cmd);
         sleep(1);
         wiringPiI2CWriteReg16(fd, CMD_CCW, cmd);
-        break;
-    case 'l':
+        //break;
+    /*case 'l':
         wiringPiI2CWriteReg16(fd, CMD_CCW, cmd);
         sleep(1);
         wiringPiI2CWriteReg16(fd, CMD_CCW, cmd);
@@ -37,15 +36,31 @@ void scan(char choice)
     case 's':
         wiringPiI2CWriteReg16(fd, CMD_STOP, 0x00);
         break;
+    }*/
     }
 
+    wiringPiI2CWriteReg16(fd, CMD_STOP, 0x00);
+    return 0;
 }
 
-int main(int argc, char* argv[])
+void* getPos(void* arg)
 {
-    for (int i=0; i<10; i++){
-        scan(*argv[1]);
-        //delay(1);
+    char buf[20];
+    static int fde;
+    int compteur;
+    
+    if((fde=open("/dev/encodeur",O_RDWR))==-1)
+        printf("open : %s\n",strerror(errno));
+
+    while(1){
+        read(fde,buf,20);
+        sscanf(buf, "%d", &compteur);
+        printf("Position: %d\n",compteur);
     }
-    scan('s');
+    close(fde);
+    return 0;
+}
+
+int main(){
+    return 0;
 }

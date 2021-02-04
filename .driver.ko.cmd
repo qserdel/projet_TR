@@ -1,0 +1,1 @@
+cmd_/home/pi/Desktop/ProjetTR/projet_TR/driver.ko := ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/pi/Desktop/ProjetTR/projet_TR/driver.ko /home/pi/Desktop/ProjetTR/projet_TR/driver.o /home/pi/Desktop/ProjetTR/projet_TR/driver.mod.o;  true

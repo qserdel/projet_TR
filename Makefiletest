@@ -1,0 +1,10 @@
+GCC:=g++
+LIBS:=-lwiringPi -lpthread -lm -I /usr/local/include -L /usr/local/lib -lopencv_core -lopencv_highgui -lopencv_videoio
+FLAGS:=-Wall -pthread
+all: zeone
+
+zeone: zeone.o mcc.o camOpen.o ir.o pwm.o
+    $(GCC) $(FLAGS) $(LIBS) -o zeone $^
+
+clear:
+    rm -f *.o

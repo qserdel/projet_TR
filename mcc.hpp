@@ -1,5 +1,5 @@
-#ifndef MOTOR_CC_HPP
-#define MOTOR_CC_HPP
+#ifndef MCC_HPP
+#define MCC_HPP
 
 #include <wiringPiI2C.h>
 #include <wiringPi.h>
@@ -20,6 +20,7 @@
 #define CMD_CCW              0x03  // anti-horaire / anti-trigo
 #define CMD_SET_ADDR         0x11
 
-void scan(char choice);
+void* balayage(void* arg);
+void* getPos(void* arg);
 
 #endif

@@ -1,7 +1,7 @@
-obj-m:=driver_interruption.o
+obj-m:=driver.o
 KDIR := /lib/modules/$(shell uname -r)/build
 
-all: drivers mcc pwm camOpen 
+all: drivers mcc pwm camOpen zeone 
 
 drivers:
 	$(MAKE) -C $(KDIR) M=$(shell pwd) modules

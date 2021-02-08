@@ -10,7 +10,7 @@ détectés par le lidar pour afficher l'obstacle sur l'écran.
 # Pour monter le driver de l'encodeur : sudo insmod driver.ko
 (Pour l'enlever : sudo rmmod driver.mod)
 
-Le fichier zeone.cpp contient le code du programme principal 
+Le fichier Zeone.cpp contient le code du programme principal 
 créant 3 sous-processus parallèles assurants respectivement :
  - l'acquisition de la distance mesurée par le capteur
  - l'acquisition de la position du moteur mesurée par l'encodeur

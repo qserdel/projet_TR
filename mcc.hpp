@@ -14,6 +14,8 @@
 #include <fcntl.h>
 #include "pwm.hpp"
 
+
+// commandes du moteur
 #define GROVE_MOTOR_DRIVER_DEFAULT_I2C_ADDR         0x14
 #define CMD_BRAKE            0x00
 #define CMD_STOP             0x01
@@ -27,11 +29,11 @@ static int position = 0;
 
 using namespace std;
 
-static pthread_cond_t c = PTHREAD_COND_INITIALIZER;
+//mutex permettant de s'assurer de l'alternance des mesures du capteur et de l'encodeur
 static pthread_mutex_t m = PTHREAD_MUTEX_INITIALIZER;
 static pthread_mutex_t m2 = PTHREAD_MUTEX_INITIALIZER;
 
-
+/*thread de recuperation de la distance mesurée par le capteur et affichage dans le terminal*/
 void *getDistance(void* arg){
   while(1){
     pthread_mutex_lock(&m);
@@ -39,6 +41,7 @@ void *getDistance(void* arg){
     if (wiringPiI2CWrite (fd, 0x30+i2c_pin) < 0)
       return (NULL) ;
     int value = (int)wiringPiI2CReadReg16(fd,0x30+i2c_pin);
+    //approximation de la distance en fonction de l'intensité mesurée
     float voltage = value*3.3/1024;
     close(fd);
     float distance = (17*voltage*voltage -75*voltage + 90); //valable entre 5 et 80 cm
@@ -54,6 +57,8 @@ void *getDistance(void* arg){
 
 }
 
+/*thread permettant de faire osciller le moteur entre -90° et 90° 
+  par rapport à sa position d'origine à intervalle régulier*/
 void* balayage(void* arg)
 {
     int fd;
@@ -63,8 +68,6 @@ void* balayage(void* arg)
     int cmd = (speed << 8) | (pin_ & 0xFF00);
 
     while(1){
-    //switch(choice){
-    //case 'r':
         wiringPiI2CWriteReg16(fd, CMD_CW, cmd);
         sleep(1);
         wiringPiI2CWriteReg16(fd, CMD_CW, cmd);
@@ -72,30 +75,13 @@ void* balayage(void* arg)
         wiringPiI2CWriteReg16(fd, CMD_CCW, cmd);
         sleep(1);
         wiringPiI2CWriteReg16(fd, CMD_CCW, cmd);
-        //break;
-    /*case 'l':
-        wiringPiI2CWriteReg16(fd, CMD_CCW, cmd);
-        sleep(1);
-        wiringPiI2CWriteReg16(fd, CMD_CCW, cmd);
-        sleep(1);
-        wiringPiI2CWriteReg16(fd, CMD_CW, cmd);
-        sleep(1);
-        wiringPiI2CWriteReg16(fd, CMD_CW, cmd);
-        break;
-    case 'b':
-        wiringPiI2CWriteReg16(fd, CMD_BRAKE, 0x00);
-        break;
-    case 's':
-        wiringPiI2CWriteReg16(fd, CMD_STOP, 0x00);
-        break;
-    }*/
     }
 
     wiringPiI2CWriteReg16(fd, CMD_STOP, 0x00);
     return 0;
 }
 
-
+/*thread de recuperation de la position du moteur mesurée par son encodeur et affichage dans le terminal*/
 void* getPos(void* arg)
 {
     char buf[20];

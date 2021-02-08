@@ -1,3 +1,5 @@
+/*Utilise les ports GPIO de la raspberry pour contrôler les Leds de la carte fournie*/
+
 #include <wiringPi.h>
 
 static int pin_led_r = 21; //gpio05

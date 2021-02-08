@@ -2,6 +2,8 @@
 
 using namespace cv;
 
+
+// script d'ouverture de la camera
 int main()
 {
     VideoCapture cap;

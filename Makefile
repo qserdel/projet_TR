@@ -15,7 +15,7 @@ pwm: pwm.cpp pwm.hpp
 camOpen: camOpen.cpp
 	g++ -o camOpen camOpen.cpp `pkg-config --cflags opencv` `pkg-config --libs opencv`
 
-i2c: ir.cpp ir.hpp
+ir: ir.cpp ir.hpp
 	g++ -o ir ir.cpp -lwiringPi
 
 mcc: mcc.cpp mcc.hpp

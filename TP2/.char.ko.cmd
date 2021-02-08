@@ -1,1 +1,0 @@
-cmd_/home/pi/Desktop/ProjetTR/projet_TR/TP2/char.ko := ld -r  -EL  --build-id  -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds -o /home/pi/Desktop/ProjetTR/projet_TR/TP2/char.ko /home/pi/Desktop/ProjetTR/projet_TR/TP2/char.o /home/pi/Desktop/ProjetTR/projet_TR/TP2/char.mod.o;  true

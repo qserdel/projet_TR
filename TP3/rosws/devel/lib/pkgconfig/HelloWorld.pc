@@ -1,8 +1,0 @@
-prefix=/home/polytech/Bureau/projet_TR/TP3/rosws/devel
-
-Name: HelloWorld
-Description: Description of HelloWorld
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

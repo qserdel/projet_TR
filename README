@@ -1,9 +1,34 @@
-ceci est le repository git du projet ROB5 de temps réel
+# ceci est le repository git du projet ROB5 de temps réel #
 
-pour monter le driver sudo insmod driver.ko
-l'enlever sudo rmmod driver.mod
+Ce code permet de faire fonctionner un lidar, composé d'un capteur de distance infrarouge 
+et d'un moteur à courant continu muni d'un encodeur, et de pointer une caméra pan-tilt vers les obstacles 
+détectés par le lidar pour afficher l'obstacle sur l'écran.
 
-Tableau des pins wiringPi (BCM -> wPi) :
+# Pour compiler le projet : sudo make
+(Pour le nettoyer : make clean)
+
+# Pour monter le driver de l'encodeur : sudo insmod driver.ko
+(Pour l'enlever : sudo rmmod driver.mod)
+
+Le fichier zeone.cpp contient le code du programme principal 
+créant 3 sous-processus parallèles assurants respectivement :
+ - l'acquisition de la distance mesurée par le capteur
+ - l'acquisition de la position du moteur mesurée par l'encodeur
+ - le mouvement de balayage periodique du moteur 
+et le fichier mcc.hpp contient les fonctions utilisées par ces processus
+
+!!! placer le moteur à sa position médiane avant d'executer le main !!!
+
+# Pour executer le main : ./zeone
+
+Nous n'avons malheureusement pas pu implémenter l'affichage de l'image caméra dans le programme principal.
+Cependant, le fichier camOpen.cpp contient le code permettant l'ouverture de la caméra
+# Pour ouvrir la caméra : ./camOpen
+
+Les fichiers gpio.cpp, ir.cpp, pwm.cpp et mcc.cpp contiennent du code partiellement fonctionnel
+et des tests unitaires executables avec les fonctions ./gpio ./ir ./pwm et ./mcc (résultats non garantis)
+
+Tableau de conversion des pins wiringPi (BCM -> wPi) :
 
  +-----+-----+---------+------+---+---Pi 3B+-+---+------+---------+-----+-----+
  | BCM | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | BCM |
